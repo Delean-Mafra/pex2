@@ -1,3 +1,3 @@
-=PRI.MAIÚSCULA(ESQUERDA(SUBSTITUIR(F1342; "."; " "); PROCURAR("@" ; F1342) - 1))
+=PRI.MAIÚSCULA(ESQUERDA(SUBSTITUIR(F22; "."; " "); PROCURAR("@" ; F2) - 1)) 
 
 =SE(CONT.SE(adm!A:A; A2)>0; "Sim"; "Não")  
