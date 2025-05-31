@@ -142,9 +142,10 @@ O principal script Python utilizado para gerar a planilha de importação no MOV
 
 ## Evidências
 
-- Relatórios e gráficos entregues à equipe técnica e Product Owners.
+- Relatórios e gráficos entregues à equipe técnica e aos Product Owners.
 - Código-fonte disponível neste repositório.
 - Scripts SQL e Python documentados no apêndice acima.
+- Imagens e evidências visuais disponíveis na pasta [`evidencias`](https://github.com/Delean-Mafra/pex2/tree/main/evidencias).
 
 ---
 
