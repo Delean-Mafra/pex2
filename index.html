@@ -3,96 +3,369 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório de Atividades – Projeto de Extensão II</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>Relatório Tecnológico - Projeto de Extensão II</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #011a13;
+            color: #e0f2e9;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Share Tech Mono', monospace;
+        }
+        .data-node {
+            border-left: 3px solid #10b981;
+            position: relative;
+        }
+        .data-node::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 10px;
+            height: 20px;
+            background-color: #10b981;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .tech-card {
+            background: rgba(1, 26, 19, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid #10b981;
+        }
+        .chart-bar {
+            background: linear-gradient(90deg, #10b981, #34d399);
+            height: 30px;
+            margin-bottom: 10px;
+            transition: width 1s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+        .chart-bar::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                        rgba(255,255,255,0.1) 0%, 
+                        rgba(255,255,255,0.3) 50%, 
+                        rgba(255,255,255,0.1) 100%);
+            background-size: 200% 100%;
+            animation: shine 2s infinite;
+        }
+        @keyframes shine {
+            0% { background-position: -100% 0; }
+            100% { background-position: 100% 0; }
+        }
+        .code-block {
+            background-color: #022c22;
+            border-left: 4px solid #10b981;
+        }
+        .glow-text {
+            text-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="header-content">
-                <div class="author-info">
-                    <img src="imagens/perfil_autor.jpg" alt="Foto do Autor" class="author-photo">
-                    <p class="author-name">Nome do Autor do Projeto</p> <!-- SUBSTITUA PELO SEU NOME -->
-                    <p class="course-name">Ciência de Dados - Projeto de Extensão II</p>
+    <!-- Particle.js Background -->
+    <div id="particles-js"></div>
+
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header with Tech Elements -->
+        <header class="mb-12 tech-card p-6 rounded-lg shadow-lg">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="relative">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQESF-6-X1pRQA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1723311279162?e=1752710400&v=beta&t=rg8nF2cE4kxzpCzMBShzmyVa-wjMmQaikdkoqIpmLFA" 
+                             alt="Foto do Autor" 
+                             class="w-20 h-20 rounded-full border-2 border-emerald-400">
+                        <div class="absolute -bottom-2 -right-2 bg-emerald-600 rounded-full p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-emerald-300 text-sm">CIÊNCIA DE DADOS</p>
+                        <p class="text-xl font-bold glow-text">Delean Mafra</p>
+                        <p class="text-emerald-200 text-sm">PROJETO DE EXTENSÃO II</p>
+                    </div>
                 </div>
-                <h1>RELATÓRIO DE ATIVIDADES – PROJETO DE EXTENSÃO II</h1>
+                <div class="md:ml-auto text-center md:text-right">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-2 glow-text">RELATÓRIO DE ATIVIDADES</h1>
+                    <div class="inline-block border-t-2 border-b-2 border-emerald-400 px-4 py-1">
+                        <p class="text-emerald-300">SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA</p>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <main>
-            <section id="introducao">
-                <h2>1 INTRODUÇÃO</h2>
-                <p>Este relatório tem como objetivo descrever as atividades realizadas no contexto do Projeto de Extensão II do curso de Ciência de Dados, cuja atuação se deu na empresa SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA. O projeto teve foco na identificação e resolução de um problema de categorização de clientes no sistema de suporte da organização, impactando diretamente a geração de relatórios e indicadores internos.</p>
+        <main class="space-y-12">
+            <!-- Introduction Section -->
+            <section class="tech-card p-6 rounded-lg data-node">
+                <div class="flex items-center mb-4">
+                    <div class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        1
+                    </div>
+                    <h2 class="text-2xl font-bold glow-text">INTRODUÇÃO</h2>
+                </div>
+                <p class="text-gray-300 leading-relaxed">
+                    Este relatório tecnológico documenta as atividades realizadas no Projeto de Extensão II do curso de Ciência de Dados, 
+                    com atuação na empresa SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA. O projeto focou na resolução de problemas de 
+                    categorização de clientes utilizando técnicas avançadas de processamento de dados e integração de sistemas.
+                </p>
+                <div class="mt-4 flex space-x-2">
+                    <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-xs">ETL</span>
+                    <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-xs">SQL</span>
+                    <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-xs">Data Cleaning</span>
+                    <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-xs">MOVIDESK</span>
+                </div>
             </section>
 
-            <section id="identificacao">
-                <h2>2 IDENTIFICAÇÃO DA ORGANIZAÇÃO</h2>
-                <p><strong>Nome da Organização:</strong> SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA</p>
-                <p><strong>Representante responsável:</strong> Aldair Schveitzer – Tech Leader</p>
-                <p><strong>Endereço:</strong> [inserir endereço da empresa, caso necessário segundo orientação institucional]</p>
-                <p><strong>Área de Atuação:</strong> Desenvolvimento de software e suporte técnico</p>
+            <!-- Organization Section -->
+            <section class="tech-card p-6 rounded-lg data-node">
+                <div class="flex items-center mb-4">
+                    <div class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        2
+                    </div>
+                    <h2 class="text-2xl font-bold glow-text">IDENTIFICAÇÃO DA ORGANIZAÇÃO</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 text-gray-300">
+                    <div>
+                        <p class="font-bold text-emerald-400">Nome da Organização:</p>
+                        <p>SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-emerald-400">Representante:</p>
+                        <p>Aldair Schveitzer – Tech Leader</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-emerald-400">Endereço:</p>
+                        <p>Rod. Virgílio Várzea, 587 - 3º piso, sala 302 - Monte Verde, Florianópolis - SC, 88032-000</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-emerald-400">Área de Atuação:</p>
+                        <p>Desenvolvimento de software e suporte técnico</p>
+                    </div>
+                </div>
             </section>
 
-            <section id="objetivos">
-                <h2>3 OBJETIVOS</h2>
-                <h3>3.1 Objetivo Geral</h3>
-                <p>Desenvolver uma solução para identificar, classificar e integrar corretamente os dados de clientes com até 100 funcionários no sistema de suporte da empresa.</p>
-                <h3>3.2 Objetivos Específicos</h3>
-                <ul>
-                    <li>Diagnosticar a inconsistência na categorização dos clientes;</li>
-                    <li>Realizar extração e tratamento de dados oriundos de diferentes sistemas da empresa;</li>
-                    <li>Implementar rotinas de correspondência e cruzamento de dados;</li>
-                    <li>Gerar planilhas para importação adequada ao sistema MOVIDESK;</li>
-                    <li>Fornecer relatórios e visualizações que permitam melhor compreensão da base de clientes.</li>
-                </ul>
-            </section>
-
-            <section id="metodologia">
-                <h2>4 METODOLOGIA</h2>
-                <p>O projeto foi desenvolvido utilizando uma abordagem prática baseada em métodos da Ciência de Dados, com foco nas seguintes etapas:</p>
-                <h3>4.1 Diagnóstico Inicial</h3>
-                <p>Durante a visita técnica à organização, foi apresentado um problema referente à dificuldade de identificar os clientes da categoria "PW LITE" (clientes com até 100 funcionários) no sistema de suporte. Apesar desses clientes estarem classificados corretamente no sistema de gestão principal, essa informação não era refletida no sistema de atendimento, inviabilizando a extração de relatórios segmentados.</p>
-                <h3>4.2 Coleta e Integração de Dados</h3>
-                <p>Foram extraídos dados de duas fontes distintas: o sistema de gestão de clientes e o sistema de suporte (MOVIDESK). Os dados foram armazenados em um banco de dados MySQL, em tabelas separadas.</p>
-                <h3>4.3 Limpeza e Preparação dos Dados</h3>
-                <p>Aplicaram-se boas práticas de tratamento de dados (data cleaning), incluindo:</p>
-                <ul>
-                    <li>Normalização e padronização de campos;</li>
-                    <li>Tratamento de valores nulos e inconsistentes;</li>
-                    <li>Remoção de duplicidades;</li>
-                    <li>Validação de formatos de CNPJ e nomes.</li>
-                </ul>
-                <h3>4.4 Modelagem e Combinação de Dados</h3>
-                <p>Foram utilizadas instruções SQL com JOINs e estruturas CASE para realizar a correspondência entre registros de diferentes sistemas, utilizando como critérios: nome da organização, CNPJ, código interno da empresa, razão social e nome de usuário.</p>
-                <h3>4.5 Geração de Planilhas para Importação</h3>
-                <p>Com os dados tratados, desenvolveu-se um script SQL para gerar uma planilha no formato .xlsx aceito pelo sistema MOVIDESK. Inicialmente, houve falhas de importação, que foram sanadas após contato com o suporte técnico da MOVIDESK e revisão da documentação.</p>
-            </section>
-
-            <section id="resultados">
-                <h2>5 RESULTADOS OBTIDOS</h2>
-                <ul>
-                    <li>Os 2.700 clientes da categoria “PW LITE” foram atualizados com sucesso no sistema de suporte com a respectiva classificação.</li>
-                    <li>A empresa passou a conseguir gerar relatórios segmentados com base na classificação “PW LITE”.</li>
-                    <li>Foram elaborados gráficos no Google Planilhas com os principais motivos de abertura de chamados desses clientes.</li>
-                    <li>Os relatórios e gráficos foram entregues aos Product Owners Ana Elizabeth e Kin Amorin, bem como ao Project Manager Leonardo Amaral.</li>
-                </ul>
-            </section>
-
-            <section id="consideracoes">
-                <h2>6 CONSIDERAÇÕES FINAIS</h2>
-                <p>A atuação neste projeto de extensão permitiu a aplicação prática de conceitos de modelagem de dados, integração de sistemas, limpeza de dados e geração de relatórios. A entrega final atendeu à necessidade da organização, promovendo ganhos na eficiência da análise de chamados e permitindo tomada de decisão mais assertiva em relação ao atendimento da categoria “PW LITE”.</p>
-            </section>
-
-            <section id="apendice-a" class="apendice">
-                <h2>7 APÊNDICE A – CÓDIGOS SQL UTILIZADOS</h2>
-                <p>Esta seção detalha as estruturas das tabelas de banco de dados criadas e a principal consulta SQL utilizada para a combinação de dados e geração da planilha para importação no sistema MOVIDESK.</p>
+            <!-- Objectives Section -->
+            <section class="tech-card p-6 rounded-lg data-node">
+                <div class="flex items-center mb-4">
+                    <div class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        3
+                    </div>
+                    <h2 class="text-2xl font-bold glow-text">OBJETIVOS</h2>
+                </div>
                 
-                <h3>7.1 Estrutura das Tabelas (CREATE TABLE)</h3>
+                <h3 class="text-xl font-bold mt-6 mb-3 text-emerald-300">3.1 Objetivo Geral</h3>
+                <p class="text-gray-300 mb-6">
+                    Desenvolver uma solução para identificar, classificar e integrar corretamente os dados de clientes com até 100 funcionários no sistema de suporte da empresa.
+                </p>
                 
-                <h4>Tabela ahgora.cadastros_md:</h4>
-                <pre><code class="language-sql">
-CREATE TABLE ahgora.cadastros_md (
+                <h3 class="text-xl font-bold mb-3 text-emerald-300">3.2 Objetivos Específicos</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-400 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Diagnosticar a inconsistência na categorização dos clientes</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-400 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Realizar extração e tratamento de dados oriundos de diferentes sistemas</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-400 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Implementar rotinas de correspondência e cruzamento de dados</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-400 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Gerar planilhas para importação adequada ao sistema MOVIDESK</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-400 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <span>Fornecer relatórios e visualizações para compreensão da base de clientes</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Methodology Section -->
+            <section class="tech-card p-6 rounded-lg data-node">
+                <div class="flex items-center mb-4">
+                    <div class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        4
+                    </div>
+                    <h2 class="text-2xl font-bold glow-text">METODOLOGIA</h2>
+                </div>
+                <p class="text-gray-300 mb-6">
+                    O projeto foi desenvolvido utilizando uma abordagem prática baseada em métodos da Ciência de Dados, com foco nas seguintes etapas:
+                </p>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-emerald-300">4.1 Diagnóstico Inicial</h3>
+                        <p class="text-gray-300">
+                            Identificação do problema de categorização de clientes "PW LITE" (até 100 funcionários) no sistema de suporte, 
+                            apesar da classificação correta no sistema de gestão principal.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-emerald-300">4.2 Coleta e Integração de Dados</h3>
+                        <p class="text-gray-300">
+                            Extração de dados de duas fontes distintas: sistema de gestão de clientes e sistema de suporte (MOVIDESK), 
+                            armazenados em tabelas separadas no MySQL.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-emerald-300">4.3 Limpeza e Preparação dos Dados</h3>
+                        <p class="text-gray-300">
+                            Aplicação de técnicas de data cleaning incluindo normalização, tratamento de valores nulos, 
+                            remoção de duplicidades e validação de formatos.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-emerald-300">4.4 Modelagem e Combinação de Dados</h3>
+                        <p class="text-gray-300">
+                            Utilização de instruções SQL com JOINs e estruturas CASE para correspondência entre registros de diferentes sistemas, 
+                            baseado em critérios como nome da organização, CNPJ e código interno.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-emerald-300">4.5 Geração de Planilhas para Importação</h3>
+                        <p class="text-gray-300">
+                            Desenvolvimento de script SQL para gerar planilha no formato .xlsx compatível com o sistema MOVIDESK, 
+                            com ajustes após validação com suporte técnico.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="tech-card p-6 rounded-lg data-node">
+                <div class="flex items-center mb-4">
+                    <div class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        5
+                    </div>
+                    <h2 class="text-2xl font-bold glow-text">RESULTADOS OBTIDOS</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-emerald-900/50 p-4 rounded-lg border border-emerald-700">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-emerald-600 rounded-full p-2 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-emerald-300">Atualização de Clientes</h3>
+                        </div>
+                        <p class="text-gray-300">
+                            Os 2.700 clientes da categoria "PW LITE" foram atualizados com sucesso no sistema de suporte.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-emerald-900/50 p-4 rounded-lg border border-emerald-700">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-emerald-600 rounded-full p-2 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-emerald-300">Relatórios Segmentados</h3>
+                        </div>
+                        <p class="text-gray-300">
+                            A empresa passou a conseguir gerar relatórios segmentados com base na classificação "PW LITE".
+                        </p>
+                    </div>
+                    
+                    <div class="bg-emerald-900/50 p-4 rounded-lg border border-emerald-700">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-emerald-600 rounded-full p-2 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-emerald-300">Visualização de Dados</h3>
+                        </div>
+                        <p class="text-gray-300">
+                            Elaboração de gráficos com os principais motivos de abertura de chamados desses clientes.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-emerald-900/50 p-4 rounded-lg border border-emerald-700">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-emerald-600 rounded-full p-2 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-emerald-300">Entrega Final</h3>
+                        </div>
+                        <p class="text-gray-300">
+                            Relatórios e gráficos entregues aos Product Owners e Project Manager da organização.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final Considerations -->
+            <section class="tech-card p-6 rounded-lg data-node">
+                <div class="flex items-center mb-4">
+                    <div class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        6
+                    </div>
+                    <h2 class="text-2xl font-bold glow-text">CONSIDERAÇÕES FINAIS</h2>
+                </div>
+                <p class="text-gray-300 leading-relaxed">
+                    A atuação neste projeto de extensão permitiu a aplicação prática de conceitos avançados de modelagem de dados, 
+                    integração de sistemas e limpeza de dados. A solução implementada resolveu o problema de categorização de clientes, 
+                    promovendo ganhos significativos na eficiência da análise de chamados e possibilitando uma tomada de decisão mais 
+                    assertiva em relação ao atendimento da categoria "PW LITE". O projeto demonstrou o valor da Ciência de Dados aplicada 
+                    a problemas reais de negócios, com impacto direto nos processos organizacionais.
+                </p>
+            </section>
+
+            <!-- SQL Code Appendix -->
+            <section class="tech-card p-6 rounded-lg data-node">
+                <div class="flex items-center mb-4">
+                    <div class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        7
+                    </div>
+                    <h2 class="text-2xl font-bold glow-text">APÊNDICE A – CÓDIGOS SQL UTILIZADOS</h2>
+                </div>
+                <p class="text-gray-300 mb-6">
+                    Esta seção detalha as estruturas das tabelas de banco de dados criadas e a principal consulta SQL utilizada para a combinação de dados.
+                </p>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-3 text-emerald-300">7.1 Estrutura das Tabelas (CREATE TABLE)</h3>
+                    <div class="code-block p-4 rounded overflow-x-auto">
+                        <pre class="text-gray-300 text-sm"><code>
+ CREATE TABLE ahgora.cadastros_md (
   COD_REF varchar(255) NOT NULL,
   TIPO varchar(255) DEFAULT NULL,
   USUARIO text DEFAULT NULL,
@@ -135,10 +408,9 @@ AVG_ROW_LENGTH = 264
 CHARACTER SET latin1
 COLLATE latin1_swedish_ci
 ROW_FORMAT = DYNAMIC;
-                </code></pre>
 
-                <h4>Tabela ahgora.cadastros_t:</h4>
-                <pre><code class="language-sql">
+
+
 CREATE TABLE ahgora.cadastros_t (
   CODT varchar(14) NOT NULL,
   CODIGO_DA_EMPRESA_PW varchar(106) DEFAULT NULL,
@@ -186,10 +458,8 @@ AVG_ROW_LENGTH = 589
 CHARACTER SET latin1
 COLLATE latin1_swedish_ci
 ROW_FORMAT = DYNAMIC;
-                </code></pre>
 
-                <h4>Tabela ahgora.empresa_pw:</h4>
-                <pre><code class="language-sql">
+
 CREATE TABLE ahgora.empresa_pw (
   id varchar(255) NOT NULL,
   name varchar(255) DEFAULT NULL,
@@ -240,10 +510,9 @@ AVG_ROW_LENGTH = 504
 CHARACTER SET latin1
 COLLATE latin1_swedish_ci
 ROW_FORMAT = DYNAMIC;
-                </code></pre>
 
-                <h4>Tabela ahgora.ponto_contato:</h4>
-                <pre><code class="language-sql">
+
+
 CREATE TABLE ahgora.ponto_contato (
   COD_PW varchar(255) DEFAULT NULL,
   EMPRESA varchar(255) DEFAULT NULL,
@@ -262,10 +531,9 @@ AVG_ROW_LENGTH = 247
 CHARACTER SET latin1
 COLLATE latin1_swedish_ci
 ROW_FORMAT = DYNAMIC;
-                </code></pre>
 
-                <h4>Tabela ahgora.pontos_contato_pw:</h4>
-                <pre><code class="language-sql">
+
+
 CREATE TABLE ahgora.pontos_contato_pw (
   BASE varchar(255) DEFAULT NULL,
   EMAIL varchar(255) DEFAULT NULL,
@@ -280,10 +548,101 @@ AVG_ROW_LENGTH = 222
 CHARACTER SET latin1
 COLLATE latin1_swedish_ci
 ROW_FORMAT = DYNAMIC;
-                </code></pre>
 
-                <h3>7.2 Consulta SQL e Python para Geração da Planilha de Importação MOVIDESK</h3>
-                <pre><code class="language-python">
+
+
+
+SELECT DISTINCT
+  CASE 
+    WHEN cm.TIPO = 'Empresa' THEN '2'
+    WHEN cm.TIPO = 'Pessoa'  THEN '1'
+    ELSE ''
+  END AS "Tipo",
+  '2' AS "Perfil",
+  
+
+CASE 
+  WHEN cm.TIPO = 'Empresa' THEN 
+    COALESCE(
+      NULLIF(ep.name, ''), 
+      NULLIF(ct.nome, ''), 
+      NULLIF(ct.NOME_FANTASIA, ''), 
+      NULLIF(ep.razao_social, '')
+    )
+  ELSE cm.USUARIO
+END AS "Nome fantasia",
+
+
+
+-- Montado sql para atender os criteios de atualização de cadastro da MOVIDESK: https://atendimento.movidesk.com/kb/article/4694/importacao-de-pessoas?menuId=4-66-4694&ticketId= 
+
+
+  '' AS "Razão social",
+
+  cm.USUARIO AS "Usuário",
+  '# Senha removida para preservar integridade' AS "Senha",
+  CASE 
+    WHEN cm.TIPO = 'Empresa' THEN ct.CNPJ
+    ELSE ''
+  END AS "CPF / CNPJ",
+  cm.COD_REF AS "Cod. Ref.",
+  '' AS "Cod. Ref. Adicional",
+  cm.PERFIL AS "Perfil de acesso",
+  'PW LITE' AS "Classificação",
+  '' AS "Cargo",
+  '' AS "Superior hierárquico",
+CASE
+  WHEN cm.EMAIL IS NOT NULL AND cm.EMAIL <> '' THEN 'Profissional'
+  ELSE ''
+END AS "Tipo do e-mail",
+  cm.EMAIL AS "E-mail",
+  cm.TIPO_DO_CONTATO,
+  '' AS "Contato",
+  '' AS "Tipo do endereço",
+  '' AS "País",
+  '' AS "CEP",
+  '' AS "Estado",
+  '' AS "Cidade",
+  '' AS "Bairro",
+  '' AS "Rua",
+  '' AS "Número",
+  '' AS "Complemento",
+  '' AS "Referência",
+  '' AS "Equipe",
+  cm.ORGANIZACOES AS "Organização",
+  'SLA - Padrão' AS "Contrato de SLA",
+  cm.COD_PW AS "Observações",
+  cm.ATIVO AS "Ativo",
+  cm.FUSO_HORARIO AS "Fuso horário",
+  cm.IDIOMA AS "Idioma",
+  '' AS "Autenticar em"
+FROM empresa_pw ep
+LEFT JOIN (
+  SELECT * FROM cadastros_md
+  WHERE LENGTH(COD_PW) >= 6
+    AND TIPO = '1'
+    AND COD_PW REGEXP '[aA]'
+    AND COD_PW REGEXP '([0-9].*){5,}'
+    AND CNPJ IS NULL
+    AND ATIVO IS NOT NULL
+    AND ATIVO != 'Não'
+) cm ON cm.COD_PW LIKE CONCAT('%', ep.id, '%')
+LEFT JOIN cadastros_t ct ON ep.company_identifies LIKE CONCAT('%', ct.CNPJ, '%')
+WHERE ep.plan_name LIKE 'PW Lite - não habilitar';                           
+
+
+
+
+                        </code></pre>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-emerald-300">7.2 Consulta SQL com Python para Geração da Planilha</h3>
+                    <div class="code-block p-4 rounded overflow-x-auto">
+                        <pre class="text-gray-300 text-sm">
+                            <code>
+
 import mysql.connector
 from mysql.connector import Error
 import pandas as pd
@@ -292,15 +651,16 @@ def export_query_to_excel():
     try:
         # Conexão com o banco de dados MySQL
         connection = mysql.connector.connect(
-            host='',     # Preencher com o host do seu BD
-            user='',     # Preencher com o usuário do seu BD
-            password='', # Preencher com a senha do seu BD
+            host='',
+            user='',
+            password='',
             database=''  # Nome do banco de dados
         )
 
         if connection.is_connected():
             print("Conexão bem-sucedida ao banco de dados.")
-# -- Montado sql para atender os criteios de atualização de cadastro da MOVIDESK: https://atendimento.movidesk.com/kb/article/4694/importacao-de-pessoas?menuId=4-66-4694&ticketId= 
+# Montado sql para atender os criteios de atualização de cadastro da MOVIDESK: 
+# https://atendimento.movidesk.com/kb/article/4694/importacao-de-pessoas?menuId=4-66-4694&ticketId= 
             # Consulta SQL
             query = """
             SELECT DISTINCT
@@ -338,7 +698,7 @@ def export_query_to_excel():
                 ELSE ''
               END AS "Tipo do e-mail",
               cm.EMAIL AS "E-mail",
-              cm.TIPO_DO_CONTATO AS "Tipo do contato",
+              cm.TIPO_DO_CONTATO AS "Tipo do contato", -- Corrigido para corresponder à coluna original
               '' AS "Contato",
               '' AS "Tipo do endereço",
               '' AS "País",
@@ -362,14 +722,17 @@ def export_query_to_excel():
             LEFT JOIN (
               SELECT * FROM cadastros_md
               WHERE LENGTH(COD_PW) >= 6
-                AND TIPO = '1' 
+                AND TIPO = '1' -- No contexto original, parecia ser 'Empresa', mas TIPO='1' geralmente é Pessoa. Ajustar se necessário.
+                             -- Se TIPO='1' for Pessoa e o objetivo é atualizar EMPRESAS "PW LITE",
+                             -- esta subquery pode precisar de revisão ou o join cm.COD_PW LIKE CONCAT('%', ep.id, '%')
+                             -- pode estar buscando contatos associados à empresa.
                 AND COD_PW REGEXP '[aA]'
                 AND COD_PW REGEXP '([0-9].*){5,}'
-                AND CNPJ IS NULL 
+                AND CNPJ IS NULL -- Se são empresas, CNPJ não deveria ser nulo. Isso reforça que 'cm' pode ser contatos.
                 AND ATIVO IS NOT NULL
                 AND ATIVO != 'Não'
-            ) cm ON cm.COD_PW LIKE CONCAT('%', ep.id, '%') 
-            LEFT JOIN cadastros_t ct ON ep.company_identifies LIKE CONCAT('%', ct.CNPJ, '%') 
+            ) cm ON cm.COD_PW LIKE CONCAT('%', ep.id, '%') -- Assumindo que ep.id é um código da empresa presente em COD_PW dos contatos.
+            LEFT JOIN cadastros_t ct ON ep.company_identifies LIKE CONCAT('%', ct.CNPJ, '%') -- Usando CNPJ para ligar empresa_pw com cadastros_t
             WHERE ep.plan_name LIKE 'PW Lite - não habilitar';        
             """
 
@@ -391,36 +754,424 @@ def export_query_to_excel():
 
 if __name__ == "__main__":
     export_query_to_excel()
-                </code></pre>
+
+            <section class="tech-card p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-6 glow-text">GALERIA DE EVIDÊNCIAS</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="relative group overflow-hidden rounded-lg border border-emerald-700 cursor-pointer" onclick="openModal('evidencias/imagem1.png', 'Evidência 1')">
+                        <img src="evidencias/imagem1.png" alt="Evidência 1" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-lg border border-emerald-700 cursor-pointer" onclick="openModal('evidencias/imagem2.png', 'Evidência 2')">
+                        <img src="evidencias/imagem2.png" alt="Evidência 2" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-lg border border-emerald-700 cursor-pointer" onclick="openModal('evidencias/imagem3.png', 'Evidência 3')">
+                        <img src="evidencias/imagem3.png" alt="Evidência 3" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-lg border border-emerald-700 cursor-pointer" onclick="openModal('evidencias/imagem4.png', 'Evidência 4')">
+                        <img src="evidencias/imagem4.png" alt="Evidência 4" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section id="galeria-evidencias">
-                <h2>Galeria de Evidências do Projeto</h2>
-                <div class="gallery">
-                    <div class="gallery-item">
-                        <img src="evidencias/imagem1.png" alt="Evidência 1">
-                        <p class="caption">Evidência 1</p> <!-- Opcional: adicione legendas -->
+            <!-- Chart Section -->
+            <section class="tech-card p-6 rounded-lg">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold glow-text">DISTRIBUIÇÃO DE CATEGORIAS DE CLIENTES</h2>
+                    <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-sm">Google Planilhas</span>
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 1</span>
+                            <span class="text-sm font-medium text-emerald-300">34,2%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 34.2%"></div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="evidencias/imagem2.png" alt="Evidência 2">
-                        <p class="caption">Evidência 2</p>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 2</span>
+                            <span class="text-sm font-medium text-emerald-300">33,5%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 33.5%"></div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="evidencias/imagem3.png" alt="Evidência 3">
-                        <p class="caption">Evidência 3</p>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 3</span>
+                            <span class="text-sm font-medium text-emerald-300">5,2%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 5.2%"></div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="evidencias/imagem4.png" alt="Evidência 4">
-                        <p class="caption">Evidência 4</p>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 4</span>
+                            <span class="text-sm font-medium text-emerald-300">4,6%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 4.6%"></div>
                     </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 5</span>
+                            <span class="text-sm font-medium text-emerald-300">4,4%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 4.4%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 6</span>
+                            <span class="text-sm font-medium text-emerald-300">3,8%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 3.8%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 7</span>
+                            <span class="text-sm font-medium text-emerald-300">2,0%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 2.0%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 8</span>
+                            <span class="text-sm font-medium text-emerald-300">1,4%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 1.4%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 9</span>
+                            <span class="text-sm font-medium text-emerald-300">1,2%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 1.2%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 10</span>
+                            <span class="text-sm font-medium text-emerald-300">1,1%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 1.1%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 11</span>
+                            <span class="text-sm font-medium text-emerald-300">1,0%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 1.0%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 12</span>
+                            <span class="text-sm font-medium text-emerald-300">0,9%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.9%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 13</span>
+                            <span class="text-sm font-medium text-emerald-300">0,8%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.8%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 14</span>
+                            <span class="text-sm font-medium text-emerald-300">0,6%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.6%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 15</span>
+                            <span class="text-sm font-medium text-emerald-300">0,5%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.5%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 16</span>
+                            <span class="text-sm font-medium text-emerald-300">0,5%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.5%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 17</span>
+                            <span class="text-sm font-medium text-emerald-300">0,4%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.4%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 18</span>
+                            <span class="text-sm font-medium text-emerald-300">0,4%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.4%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 19</span>
+                            <span class="text-sm font-medium text-emerald-300">0,4%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.4%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 20</span>
+                            <span class="text-sm font-medium text-emerald-300">0,4%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.4%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 21</span>
+                            <span class="text-sm font-medium text-emerald-300">0,3%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.3%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 22</span>
+                            <span class="text-sm font-medium text-emerald-300">0,3%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.3%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 23</span>
+                            <span class="text-sm font-medium text-emerald-300">0,2%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.2%"></div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium text-emerald-300">Categoria 24</span>
+                            <span class="text-sm font-medium text-emerald-300">0,2%</span>
+                        </div>
+                        <div class="chart-bar" style="width: 0.2%"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-center text-sm text-emerald-300 italic">
+Obs.: Os nomes das categorias foram alteradas por exigência da organização devido a normas internas.
                 </div>
             </section>
         </main>
 
-        <footer>
-            <img src="imagens/logo_descomplica.png" alt="Logo Descomplica Faculdade Digital" class="footer-logo">
-            <p>© 2024 Seu Nome Completo. Todos os direitos reservados.</p> <!-- SUBSTITUA PELO SEU NOME -->
+        <!-- Footer -->
+        <footer class="mt-16 py-8 border-t border-emerald-800/50">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcIq56kb5ed5HdnDm6U2zhROmDaaW_jSc7cQ&s" 
+                         alt="Logo Descomplica Faculdade Digital" 
+                         class="h-10">
+                    <span class="ml-3 text-emerald-300">Ciência de Dados</span>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-emerald-400">Copyright © 2025 Delean Mafra</p>
+                    <p class="text-sm text-emerald-300/70">Todos os direitos reservados</p>
+                </div>
+            </div>
         </footer>
     </div>
+
+    <!-- Modal para visualização de imagens -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <button onclick="closeModal()" class="absolute -top-12 right-0 text-white hover:text-emerald-400 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <img id="modalImage" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg border border-emerald-700">
+            <div id="modalCaption" class="text-center text-emerald-300 mt-4 text-lg"></div>
+        </div>
+    </div>
+
+    <script>
+        // Modal functions
+        function openModal(imageSrc, caption) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            
+            modalImage.src = imageSrc;
+            modalImage.alt = caption;
+            modalCaption.textContent = caption;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Close modal on click outside image
+        document.getElementById('imageModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#10b981"
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.3,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#10b981",
+                        "opacity": 0.2,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+    </script>
 </body>
 </html>
