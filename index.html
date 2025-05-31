@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Atividades – Projeto de Extensão II</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="author-info">
+                    <img src="imagens/perfil_autor.jpg" alt="Foto do Autor" class="author-photo">
+                    <p class="author-name">Nome do Autor do Projeto</p> <!-- SUBSTITUA PELO SEU NOME -->
+                    <p class="course-name">Ciência de Dados - Projeto de Extensão II</p>
+                </div>
+                <h1>RELATÓRIO DE ATIVIDADES – PROJETO DE EXTENSÃO II</h1>
+            </div>
+        </header>
+
+        <main>
+            <section id="introducao">
+                <h2>1 INTRODUÇÃO</h2>
+                <p>Este relatório tem como objetivo descrever as atividades realizadas no contexto do Projeto de Extensão II do curso de Ciência de Dados, cuja atuação se deu na empresa SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA. O projeto teve foco na identificação e resolução de um problema de categorização de clientes no sistema de suporte da organização, impactando diretamente a geração de relatórios e indicadores internos.</p>
+            </section>
+
+            <section id="identificacao">
+                <h2>2 IDENTIFICAÇÃO DA ORGANIZAÇÃO</h2>
+                <p><strong>Nome da Organização:</strong> SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA</p>
+                <p><strong>Representante responsável:</strong> Aldair Schveitzer – Tech Leader</p>
+                <p><strong>Endereço:</strong> [inserir endereço da empresa, caso necessário segundo orientação institucional]</p>
+                <p><strong>Área de Atuação:</strong> Desenvolvimento de software e suporte técnico</p>
+            </section>
+
+            <section id="objetivos">
+                <h2>3 OBJETIVOS</h2>
+                <h3>3.1 Objetivo Geral</h3>
+                <p>Desenvolver uma solução para identificar, classificar e integrar corretamente os dados de clientes com até 100 funcionários no sistema de suporte da empresa.</p>
+                <h3>3.2 Objetivos Específicos</h3>
+                <ul>
+                    <li>Diagnosticar a inconsistência na categorização dos clientes;</li>
+                    <li>Realizar extração e tratamento de dados oriundos de diferentes sistemas da empresa;</li>
+                    <li>Implementar rotinas de correspondência e cruzamento de dados;</li>
+                    <li>Gerar planilhas para importação adequada ao sistema MOVIDESK;</li>
+                    <li>Fornecer relatórios e visualizações que permitam melhor compreensão da base de clientes.</li>
+                </ul>
+            </section>
+
+            <section id="metodologia">
+                <h2>4 METODOLOGIA</h2>
+                <p>O projeto foi desenvolvido utilizando uma abordagem prática baseada em métodos da Ciência de Dados, com foco nas seguintes etapas:</p>
+                <h3>4.1 Diagnóstico Inicial</h3>
+                <p>Durante a visita técnica à organização, foi apresentado um problema referente à dificuldade de identificar os clientes da categoria "PW LITE" (clientes com até 100 funcionários) no sistema de suporte. Apesar desses clientes estarem classificados corretamente no sistema de gestão principal, essa informação não era refletida no sistema de atendimento, inviabilizando a extração de relatórios segmentados.</p>
+                <h3>4.2 Coleta e Integração de Dados</h3>
+                <p>Foram extraídos dados de duas fontes distintas: o sistema de gestão de clientes e o sistema de suporte (MOVIDESK). Os dados foram armazenados em um banco de dados MySQL, em tabelas separadas.</p>
+                <h3>4.3 Limpeza e Preparação dos Dados</h3>
+                <p>Aplicaram-se boas práticas de tratamento de dados (data cleaning), incluindo:</p>
+                <ul>
+                    <li>Normalização e padronização de campos;</li>
+                    <li>Tratamento de valores nulos e inconsistentes;</li>
+                    <li>Remoção de duplicidades;</li>
+                    <li>Validação de formatos de CNPJ e nomes.</li>
+                </ul>
+                <h3>4.4 Modelagem e Combinação de Dados</h3>
+                <p>Foram utilizadas instruções SQL com JOINs e estruturas CASE para realizar a correspondência entre registros de diferentes sistemas, utilizando como critérios: nome da organização, CNPJ, código interno da empresa, razão social e nome de usuário.</p>
+                <h3>4.5 Geração de Planilhas para Importação</h3>
+                <p>Com os dados tratados, desenvolveu-se um script SQL para gerar uma planilha no formato .xlsx aceito pelo sistema MOVIDESK. Inicialmente, houve falhas de importação, que foram sanadas após contato com o suporte técnico da MOVIDESK e revisão da documentação.</p>
+            </section>
+
+            <section id="resultados">
+                <h2>5 RESULTADOS OBTIDOS</h2>
+                <ul>
+                    <li>Os 2.700 clientes da categoria “PW LITE” foram atualizados com sucesso no sistema de suporte com a respectiva classificação.</li>
+                    <li>A empresa passou a conseguir gerar relatórios segmentados com base na classificação “PW LITE”.</li>
+                    <li>Foram elaborados gráficos no Google Planilhas com os principais motivos de abertura de chamados desses clientes.</li>
+                    <li>Os relatórios e gráficos foram entregues aos Product Owners Ana Elizabeth e Kin Amorin, bem como ao Project Manager Leonardo Amaral.</li>
+                </ul>
+            </section>
+
+            <section id="consideracoes">
+                <h2>6 CONSIDERAÇÕES FINAIS</h2>
+                <p>A atuação neste projeto de extensão permitiu a aplicação prática de conceitos de modelagem de dados, integração de sistemas, limpeza de dados e geração de relatórios. A entrega final atendeu à necessidade da organização, promovendo ganhos na eficiência da análise de chamados e permitindo tomada de decisão mais assertiva em relação ao atendimento da categoria “PW LITE”.</p>
+            </section>
+
+            <section id="apendice-a" class="apendice">
+                <h2>7 APÊNDICE A – CÓDIGOS SQL UTILIZADOS</h2>
+                <p>Esta seção detalha as estruturas das tabelas de banco de dados criadas e a principal consulta SQL utilizada para a combinação de dados e geração da planilha para importação no sistema MOVIDESK.</p>
+                
+                <h3>7.1 Estrutura das Tabelas (CREATE TABLE)</h3>
+                
+                <h4>Tabela ahgora.cadastros_md:</h4>
+                <pre><code class="language-sql">
+CREATE TABLE ahgora.cadastros_md (
+  COD_REF varchar(255) NOT NULL,
+  TIPO varchar(255) DEFAULT NULL,
+  USUARIO text DEFAULT NULL,
+  CNPJ varchar(255) DEFAULT NULL,
+  COD_REF_AD varchar(255) DEFAULT NULL,
+  PERFIL varchar(255) DEFAULT NULL,
+  CLASSIFICACAO varchar(255) DEFAULT NULL,
+  EMAIL varchar(255) DEFAULT NULL,
+  TIPO_DO_CONTATO text DEFAULT NULL,
+  CEP varchar(255) DEFAULT NULL,
+  ESTADO varchar(255) DEFAULT NULL,
+  CIDADE varchar(255) DEFAULT NULL,
+  BAIRRO varchar(255) DEFAULT NULL,
+  PRIMENTO_END varchar(255) DEFAULT NULL,
+  NUMERO varchar(255) DEFAULT NULL,
+  SEG_END varchar(255) DEFAULT NULL,
+  NOTE varchar(255) DEFAULT NULL,
+  ORGANIZACOES text DEFAULT NULL,
+  CONTRATOS_DE_SLA varchar(255) DEFAULT NULL,
+  ATIVOS varchar(255) DEFAULT NULL,
+  OBSERVACOES varchar(255) DEFAULT NULL,
+  CADASTRADO_EM varchar(255) DEFAULT NULL,
+  ALTERADO_EM varchar(255) DEFAULT NULL,
+  FUSO_HORARIO varchar(255) DEFAULT NULL,
+  IDIOMA varchar(255) DEFAULT NULL,
+  ATIVO varchar(255) DEFAULT NULL,
+  NUMERO_DO_CONTRATO varchar(255) DEFAULT NULL,
+  TIPO_DO_CONTRATO varchar(255) DEFAULT NULL,
+  CLIENTE_REVENDA varchar(255) DEFAULT NULL,
+  COD_PW text DEFAULT NULL,
+  MRR varchar(255) DEFAULT NULL,
+  SEGMENTACAO varchar(255) DEFAULT NULL,
+  CSM varchar(255) DEFAULT NULL,
+  FILIAIS varchar(255) DEFAULT NULL,
+  BILLING varchar(255) DEFAULT NULL,
+  PRIMARY KEY (COD_REF)
+)
+ENGINE = INNODB
+AVG_ROW_LENGTH = 264
+CHARACTER SET latin1
+COLLATE latin1_swedish_ci
+ROW_FORMAT = DYNAMIC;
+                </code></pre>
+
+                <h4>Tabela ahgora.cadastros_t:</h4>
+                <pre><code class="language-sql">
+CREATE TABLE ahgora.cadastros_t (
+  CODT varchar(14) NOT NULL,
+  CODIGO_DA_EMPRESA_PW varchar(106) DEFAULT NULL,
+  CARTEIRA varchar(14) DEFAULT NULL,
+  NOME varchar(90) DEFAULT NULL,
+  NOME_FANTASIA varchar(80) DEFAULT NULL,
+  CNPJ varchar(18) DEFAULT NULL,
+  UF varchar(14) DEFAULT NULL,
+  MRR_CONTRATADO_REAL decimal(15, 2) DEFAULT NULL,
+  MRR_PAGANTE_REAL decimal(15, 2) DEFAULT NULL,
+  PRIMEIRA_ASSINATURA date DEFAULT NULL,
+  ULTIMA_ASSINATURA date DEFAULT NULL,
+  SEGMENTO varchar(21) DEFAULT NULL,
+  HEALTHSCORE decimal(15, 2) DEFAULT NULL,
+  PREDICAO_DE_CHURN varchar(20) DEFAULT NULL,
+  MOMENTO varchar(35) DEFAULT NULL,
+  INSERCAO_EMPODERA date DEFAULT NULL,
+  AGENTES varchar(83) DEFAULT NULL,
+  EMAIL_DO_AGENTE varchar(91) DEFAULT NULL,
+  ESN_NOME varchar(40) DEFAULT NULL,
+  ESN_TELEFONE varchar(15) DEFAULT NULL,
+  ESN_EMAIL varchar(40) DEFAULT NULL,
+  GSN_NOME varchar(37) DEFAULT NULL,
+  GSN_TELEFONE varchar(15) DEFAULT NULL,
+  GSN_EMAIL varchar(35) DEFAULT NULL,
+  GESN_NOME varchar(39) DEFAULT NULL,
+  GESN_TELEFONE varchar(14) DEFAULT NULL,
+  GESN_EMAIL varchar(32) DEFAULT NULL,
+  MONITORADO varchar(14) DEFAULT NULL,
+  UNIDADE_DE_VENDA varchar(99) DEFAULT NULL,
+  FAIXA_DE_FUNCIONARIOS varchar(21) DEFAULT NULL,
+  TIPO_DE_CLIENTE varchar(15) DEFAULT NULL,
+  HEALTHSCORE_IMP decimal(15, 2) DEFAULT NULL,
+  EMAIL_IMP varchar(49) DEFAULT NULL,
+  TIPO_CLIENTE varchar(14) DEFAULT NULL,
+  GRUPO_ECONOMICO varchar(17) DEFAULT NULL,
+  ELEGIVEL_AO_CANCELAMENTO varchar(24) DEFAULT NULL,
+  INADIMPLENTE varchar(14) DEFAULT NULL,
+  MRR_AHGORA decimal(15, 2) DEFAULT NULL,
+  MRR_PAGANTES_AHGORA decimal(15, 2) DEFAULT NULL,
+  PRIMARY KEY (CODT)
+)
+ENGINE = INNODB
+AVG_ROW_LENGTH = 589
+CHARACTER SET latin1
+COLLATE latin1_swedish_ci
+ROW_FORMAT = DYNAMIC;
+                </code></pre>
+
+                <h4>Tabela ahgora.empresa_pw:</h4>
+                <pre><code class="language-sql">
+CREATE TABLE ahgora.empresa_pw (
+  id varchar(255) NOT NULL,
+  name varchar(255) DEFAULT NULL,
+  razao_social varchar(255) DEFAULT NULL,
+  company_identifies text DEFAULT NULL,
+  created_date datetime DEFAULT NULL,
+  test varchar(255) DEFAULT NULL,
+  pendencies_name varchar(255) DEFAULT NULL,
+  plan_id varchar(255) DEFAULT NULL,
+  plan_name varchar(255) DEFAULT NULL,
+  customer_type_name varchar(255) DEFAULT NULL,
+  service_level varchar(255) DEFAULT NULL,
+  blocked varchar(255) DEFAULT NULL,
+  blocked_description text DEFAULT NULL,
+  blocked_responsible varchar(255) DEFAULT NULL,
+  blocked_date datetime DEFAULT NULL,
+  address varchar(255) DEFAULT NULL,
+  address_complement varchar(255) DEFAULT NULL,
+  address_district varchar(255) DEFAULT NULL,
+  address_country_id varchar(255) DEFAULT NULL,
+  address_country_name varchar(255) DEFAULT NULL,
+  address_federation_state_id varchar(255) DEFAULT NULL,
+  address_federation_state_name varchar(255) DEFAULT NULL,
+  address_city varchar(255) DEFAULT NULL,
+  address_cep varchar(255) DEFAULT NULL,
+  telephone_ddd varchar(255) DEFAULT NULL,
+  telephone varchar(255) DEFAULT NULL,
+  finance_id text DEFAULT NULL,
+  contact_points text DEFAULT NULL,
+  module_ahfin_seguro_acidentes_pessoais_88i_enabled varchar(255) DEFAULT NULL,
+  module_pwlite_enabled varchar(255) DEFAULT NULL,
+  module_pwlite_done varchar(255) DEFAULT NULL,
+  module_pwlite_finished_at varchar(255) DEFAULT NULL,
+  csm varchar(255) DEFAULT NULL,
+  segmento varchar(255) DEFAULT NULL,
+  revenda varchar(255) DEFAULT NULL,
+  module_reports_habilita_novo_fluxo_relatorios varchar(255) DEFAULT NULL,
+  module_reports_desabilita_relatorios_antigos varchar(255) DEFAULT NULL,
+  module_reports_agendamento_relatorios varchar(255) DEFAULT NULL,
+  module_reports_usa_mes_atual varchar(255) DEFAULT NULL,
+  module_ahpi_usa_nova_apuracao varchar(255) DEFAULT NULL,
+  module_pwlite_enabled_hourslite varchar(255) DEFAULT NULL,
+  contract_integration varchar(255) DEFAULT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB
+AVG_ROW_LENGTH = 504
+CHARACTER SET latin1
+COLLATE latin1_swedish_ci
+ROW_FORMAT = DYNAMIC;
+                </code></pre>
+
+                <h4>Tabela ahgora.ponto_contato:</h4>
+                <pre><code class="language-sql">
+CREATE TABLE ahgora.ponto_contato (
+  COD_PW varchar(255) DEFAULT NULL,
+  EMPRESA varchar(255) DEFAULT NULL,
+  CONTATO varchar(255) DEFAULT NULL,
+  CNPJ varchar(255) DEFAULT NULL,
+  MYAHGORA varchar(255) DEFAULT NULL,
+  ACESSOWEB varchar(255) DEFAULT NULL,
+  TIMESHEET varchar(255) DEFAULT NULL,
+  FERIAS varchar(255) DEFAULT NULL,
+  ROSTERING varchar(255) DEFAULT NULL,
+  ANALYTICS varchar(255) DEFAULT NULL,
+  SMARTGATE varchar(255) DEFAULT NULL
+)
+ENGINE = INNODB
+AVG_ROW_LENGTH = 247
+CHARACTER SET latin1
+COLLATE latin1_swedish_ci
+ROW_FORMAT = DYNAMIC;
+                </code></pre>
+
+                <h4>Tabela ahgora.pontos_contato_pw:</h4>
+                <pre><code class="language-sql">
+CREATE TABLE ahgora.pontos_contato_pw (
+  BASE varchar(255) DEFAULT NULL,
+  EMAIL varchar(255) DEFAULT NULL,
+  NOME varchar(255) DEFAULT NULL,
+  PERFIL varchar(255) DEFAULT NULL,
+  ORGANIZACAO varchar(255) DEFAULT NULL,
+  CLASSIFICA varchar(255) DEFAULT NULL,
+  CNPJ varchar(255) DEFAULT NULL
+)
+ENGINE = INNODB
+AVG_ROW_LENGTH = 222
+CHARACTER SET latin1
+COLLATE latin1_swedish_ci
+ROW_FORMAT = DYNAMIC;
+                </code></pre>
+
+                <h3>7.2 Consulta SQL e Python para Geração da Planilha de Importação MOVIDESK</h3>
+                <pre><code class="language-python">
+import mysql.connector
+from mysql.connector import Error
+import pandas as pd
+
+def export_query_to_excel():
+    try:
+        # Conexão com o banco de dados MySQL
+        connection = mysql.connector.connect(
+            host='',     # Preencher com o host do seu BD
+            user='',     # Preencher com o usuário do seu BD
+            password='', # Preencher com a senha do seu BD
+            database=''  # Nome do banco de dados
+        )
+
+        if connection.is_connected():
+            print("Conexão bem-sucedida ao banco de dados.")
+# -- Montado sql para atender os criteios de atualização de cadastro da MOVIDESK: https://atendimento.movidesk.com/kb/article/4694/importacao-de-pessoas?menuId=4-66-4694&ticketId= 
+            # Consulta SQL
+            query = """
+            SELECT DISTINCT
+              CASE 
+                WHEN cm.TIPO = 'Empresa' THEN '2'
+                WHEN cm.TIPO = 'Pessoa'  THEN '1'
+                ELSE ''
+              END AS "Tipo",
+              '2' AS "Perfil",
+              CASE 
+                WHEN cm.TIPO = 'Empresa' THEN 
+                  COALESCE(
+                    NULLIF(ep.name, ''), 
+                    NULLIF(ct.nome, ''), 
+                    NULLIF(ct.NOME_FANTASIA, ''), 
+                    NULLIF(ep.razao_social, '')
+                  )
+                ELSE cm.USUARIO
+              END AS "Nome fantasia",
+              '' AS "Razão social",
+              cm.USUARIO AS "Usuário",
+              '# Senha removida para preservar integridade' AS "Senha",
+              CASE 
+                WHEN cm.TIPO = 'Empresa' THEN ct.CNPJ
+                ELSE ''
+              END AS "CPF / CNPJ",
+              cm.COD_REF AS "Cod. Ref.",
+              '' AS "Cod. Ref. Adicional",
+              cm.PERFIL AS "Perfil de acesso",
+              'PW LITE' AS "Classificação",
+              '' AS "Cargo",
+              '' AS "Superior hierárquico",
+              CASE
+                WHEN cm.EMAIL IS NOT NULL AND cm.EMAIL <> '' THEN 'Profissional'
+                ELSE ''
+              END AS "Tipo do e-mail",
+              cm.EMAIL AS "E-mail",
+              cm.TIPO_DO_CONTATO AS "Tipo do contato",
+              '' AS "Contato",
+              '' AS "Tipo do endereço",
+              '' AS "País",
+              '' AS "CEP",
+              '' AS "Estado",
+              '' AS "Cidade",
+              '' AS "Bairro",
+              '' AS "Rua",
+              '' AS "Número",
+              '' AS "Complemento",
+              '' AS "Referência",
+              '' AS "Equipe",
+              cm.ORGANIZACOES AS "Organização",
+              'SLA - Padrão' AS "Contrato de SLA",
+              cm.COD_PW AS "Observações",
+              cm.ATIVO AS "Ativo",
+              cm.FUSO_HORARIO AS "Fuso horário",
+              cm.IDIOMA AS "Idioma",
+              '' AS "Autenticar em"
+            FROM empresa_pw ep
+            LEFT JOIN (
+              SELECT * FROM cadastros_md
+              WHERE LENGTH(COD_PW) >= 6
+                AND TIPO = '1' 
+                AND COD_PW REGEXP '[aA]'
+                AND COD_PW REGEXP '([0-9].*){5,}'
+                AND CNPJ IS NULL 
+                AND ATIVO IS NOT NULL
+                AND ATIVO != 'Não'
+            ) cm ON cm.COD_PW LIKE CONCAT('%', ep.id, '%') 
+            LEFT JOIN cadastros_t ct ON ep.company_identifies LIKE CONCAT('%', ct.CNPJ, '%') 
+            WHERE ep.plan_name LIKE 'PW Lite - não habilitar';        
+            """
+
+            # Executar a consulta e carregar os dados em um DataFrame do pandas
+            data_frame = pd.read_sql(query, connection)
+
+            # Exportar para um arquivo Excel
+            output_file = "resultado_consulta.xlsx"
+            data_frame.to_excel(output_file, index=False)
+
+            print(f"Consulta exportada com sucesso para o arquivo: {output_file}")
+
+    except Error as e:
+        print(f"Erro ao conectar ao MySQL: {e}")
+    finally:
+        if connection.is_connected():
+            connection.close()
+            print("Conexão com o banco de dados encerrada.")
+
+if __name__ == "__main__":
+    export_query_to_excel()
+                </code></pre>
+            </section>
+
+            <section id="galeria-evidencias">
+                <h2>Galeria de Evidências do Projeto</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="evidencias/imagem1.png" alt="Evidência 1">
+                        <p class="caption">Evidência 1</p> <!-- Opcional: adicione legendas -->
+                    </div>
+                    <div class="gallery-item">
+                        <img src="evidencias/imagem2.png" alt="Evidência 2">
+                        <p class="caption">Evidência 2</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="evidencias/imagem3.png" alt="Evidência 3">
+                        <p class="caption">Evidência 3</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="evidencias/imagem4.png" alt="Evidência 4">
+                        <p class="caption">Evidência 4</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <img src="imagens/logo_descomplica.png" alt="Logo Descomplica Faculdade Digital" class="footer-logo">
+            <p>© 2024 Seu Nome Completo. Todos os direitos reservados.</p> <!-- SUBSTITUA PELO SEU NOME -->
+        </footer>
+    </div>
+</body>
+</html>
