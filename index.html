@@ -69,9 +69,64 @@
             100% { background-position: 100% 0; }
         }
         .code-block {
-            background-color: #022c22;
-            border-left: 4px solid #10b981;
+            background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
+            border: 1px solid #2d3748;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
         }
+        .code-header {
+            background: linear-gradient(90deg, #2d3748, #4a5568);
+            padding: 12px 16px;
+            border-bottom: 1px solid #4a5568;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .code-dots {
+            display: flex;
+            gap: 6px;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .dot.red { background-color: #ff5f56; }
+        .dot.yellow { background-color: #ffbd2e; }
+        .dot.green { background-color: #27ca3f; }
+        .code-lang {
+            font-size: 12px;
+            color: #a0aec0;
+            font-weight: 500;
+        }
+        .code-content {
+            padding: 20px;
+            font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+        /* SQL Syntax Highlighting */
+        .sql-keyword { color: #c792ea; font-weight: 600; }
+        .sql-string { color: #c3e88d; }
+        .sql-comment { color: #546e7a; font-style: italic; }
+        .sql-number { color: #f78c6c; }
+        .sql-operator { color: #89ddff; }
+        .sql-function { color: #82aaff; }
+        .sql-column { color: #ffcb6b; }
+        .sql-table { color: #ff5370; }
+        
+        /* Python Syntax Highlighting */
+        .py-keyword { color: #c792ea; font-weight: 600; }
+        .py-string { color: #c3e88d; }
+        .py-comment { color: #546e7a; font-style: italic; }
+        .py-number { color: #f78c6c; }
+        .py-function { color: #82aaff; }
+        .py-class { color: #ffcb6b; }
+        .py-builtin { color: #89ddff; }
+        .py-operator { color: #89ddff; }
+        
         .glow-text {
             text-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
         }
@@ -112,6 +167,21 @@
         </header>
 
         <main class="space-y-12">
+            <!-- Resumo Section -->
+            <section class="tech-card p-6 rounded-lg data-node">
+                <div class="flex items-center mb-4">
+                    <div class="bg-emerald-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                        R
+                    </div>
+                    <h2 class="text-2xl font-bold glow-text">RESUMO</h2>
+                </div>
+                <p class="text-gray-300 leading-relaxed">
+                    Este relatório tem como objetivo descrever as atividades realizadas no contexto do Projeto de Extensão II do curso de Ciência de Dados, 
+                    cuja atuação se deu na empresa SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA. O projeto teve foco na identificação e resolução de um problema 
+                    de categorização de clientes no sistema de suporte da organização, impactando diretamente a geração de relatórios e indicadores internos.
+                </p>
+            </section>
+
             <!-- Introduction Section -->
             <section class="tech-card p-6 rounded-lg data-node">
                 <div class="flex items-center mb-4">
@@ -121,15 +191,18 @@
                     <h2 class="text-2xl font-bold glow-text">INTRODUÇÃO</h2>
                 </div>
                 <p class="text-gray-300 leading-relaxed">
-                    Este relatório tem como objetivo descrever as atividades realizadas no contexto do Projeto de Extensão II do curso de Ciência de Dados, 
-                    cuja atuação se deu na empresa SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA. O projeto teve foco na identificação e resolução de um problema 
-                    de categorização de clientes no sistema de suporte da organização, impactando diretamente a geração de relatórios e indicadores internos.
+                    Realizei visita à empresa SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA, onde entreguei a carta de apresentação e fui direcionado para falar 
+                    com Aldair Schveitzer, Tech Leader de todo o setor de suporte e desenvolvimento de software. Apresentei-me como acadêmico, colocando-me 
+                    à disposição para colaborar com as demandas da organização. Também entreguei o termo de autorização para assinatura.
                 </p>
                 <div class="mt-4 flex space-x-2">
                     <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-xs">ETL</span>
                     <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-xs">SQL</span>
                     <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-xs">Data Cleaning</span>
-                    <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-xs">MOVIDESK</span>
+                    <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-xs">MySQL</span>
+                    <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-xs">Data Analysis</span>                   
+                    <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-xs">Google Sheets</span>
+                    <span class="px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full text-xs">Python</span>
                 </div>
             </section>
 
@@ -366,307 +439,306 @@
                 </p>
                 
                 <div class="mb-8">
-                    <h3 class="text-xl font-bold mb-3 text-emerald-300">7.1 Estrutura das Tabelas (CREATE TABLE)</h3>
-                    <div class="code-block p-4 rounded overflow-x-auto">
-                        <pre class="text-gray-300 text-sm"><code>
- CREATE TABLE ahgora.cadastros_md (
-  COD_REF varchar(255) NOT NULL,
-  TIPO varchar(255) DEFAULT NULL,
-  USUARIO text DEFAULT NULL,
-  CNPJ varchar(255) DEFAULT NULL,
-  COD_REF_AD varchar(255) DEFAULT NULL,
-  PERFIL varchar(255) DEFAULT NULL,
-  CLASSIFICACAO varchar(255) DEFAULT NULL,
-  EMAIL varchar(255) DEFAULT NULL,
-  TIPO_DO_CONTATO text DEFAULT NULL,
-  CEP varchar(255) DEFAULT NULL,
-  ESTADO varchar(255) DEFAULT NULL,
-  CIDADE varchar(255) DEFAULT NULL,
-  BAIRRO varchar(255) DEFAULT NULL,
-  PRIMENTO_END varchar(255) DEFAULT NULL,
-  NUMERO varchar(255) DEFAULT NULL,
-  SEG_END varchar(255) DEFAULT NULL,
-  NOTE varchar(255) DEFAULT NULL,
-  ORGANIZACOES text DEFAULT NULL,
-  CONTRATOS_DE_SLA varchar(255) DEFAULT NULL,
-  ATIVOS varchar(255) DEFAULT NULL,
-  OBSERVACOES varchar(255) DEFAULT NULL,
-  CADASTRADO_EM varchar(255) DEFAULT NULL,
-  ALTERADO_EM varchar(255) DEFAULT NULL,
-  FUSO_HORARIO varchar(255) DEFAULT NULL,
-  IDIOMA varchar(255) DEFAULT NULL,
-  ATIVO varchar(255) DEFAULT NULL,
-  NUMERO_DO_CONTRATO varchar(255) DEFAULT NULL,
-  TIPO_DO_CONTRATO varchar(255) DEFAULT NULL,
-  CLIENTE_REVENDA varchar(255) DEFAULT NULL,
-  COD_PW text DEFAULT NULL,
-  MRR varchar(255) DEFAULT NULL,
-  SEGMENTACAO varchar(255) DEFAULT NULL,
-  CSM varchar(255) DEFAULT NULL,
-  FILIAIS varchar(255) DEFAULT NULL,
-  BILLING varchar(255) DEFAULT NULL,
-  PRIMARY KEY (COD_REF)
+                    <h3 class="text-xl font-bold mb-3 text-emerald-300">7.1 Estrutura das Tabelas (CREATE TABLE) e Consulta Principal</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <div class="dot red"></div>
+                                <div class="dot yellow"></div>
+                                <div class="dot green"></div>
+                            </div>
+                            <div class="code-lang">SQL</div>
+                        </div>
+                        <div class="code-content">
+                            <pre><code><span class="sql-keyword">CREATE TABLE</span> <span class="sql-table">ahgora.cadastros_md</span> (
+  <span class="sql-column">COD_REF</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">NOT NULL</span>,
+  <span class="sql-column">TIPO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">USUARIO</span> <span class="sql-keyword">text DEFAULT NULL</span>,
+  <span class="sql-column">CNPJ</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">COD_REF_AD</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">PERFIL</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">CLASSIFICACAO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">EMAIL</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">TIPO_DO_CONTATO</span> <span class="sql-keyword">text DEFAULT NULL</span>,
+  <span class="sql-column">CEP</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ESTADO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">CIDADE</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">BAIRRO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">PRIMENTO_END</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">NUMERO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">SEG_END</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">NOTE</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ORGANIZACOES</span> <span class="sql-keyword">text DEFAULT NULL</span>,
+  <span class="sql-column">CONTRATOS_DE_SLA</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ATIVOS</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">OBSERVACOES</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">CADASTRADO_EM</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ALTERADO_EM</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">FUSO_HORARIO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">IDIOMA</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ATIVO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">NUMERO_DO_CONTRATO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">TIPO_DO_CONTRATO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">CLIENTE_REVENDA</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">COD_PW</span> <span class="sql-keyword">text DEFAULT NULL</span>,
+  <span class="sql-column">MRR</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">SEGMENTACAO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">CSM</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">FILIAIS</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">BILLING</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-keyword">PRIMARY KEY</span> (<span class="sql-column">COD_REF</span>)
 )
-ENGINE = INNODB
-AVG_ROW_LENGTH = 264
-CHARACTER SET latin1
-COLLATE latin1_swedish_ci
-ROW_FORMAT = DYNAMIC;
+<span class="sql-keyword">ENGINE</span> <span class="sql-operator">=</span> <span class="sql-keyword">INNODB</span>
+<span class="sql-keyword">AVG_ROW_LENGTH</span> <span class="sql-operator">=</span> <span class="sql-number">264</span>
+<span class="sql-keyword">CHARACTER SET</span> <span class="sql-keyword">latin1</span>
+<span class="sql-keyword">COLLATE</span> <span class="sql-keyword">latin1_swedish_ci</span>
+<span class="sql-keyword">ROW_FORMAT</span> <span class="sql-operator">=</span> <span class="sql-keyword">DYNAMIC</span>;
 
 
 
-CREATE TABLE ahgora.cadastros_t (
-  CODT varchar(14) NOT NULL,
-  CODIGO_DA_EMPRESA_PW varchar(106) DEFAULT NULL,
-  CARTEIRA varchar(14) DEFAULT NULL,
-  NOME varchar(90) DEFAULT NULL,
-  NOME_FANTASIA varchar(80) DEFAULT NULL,
-  CNPJ varchar(18) DEFAULT NULL,
-  UF varchar(14) DEFAULT NULL,
-  MRR_CONTRATADO_REAL decimal(15, 2) DEFAULT NULL,
-  MRR_PAGANTE_REAL decimal(15, 2) DEFAULT NULL,
-  PRIMEIRA_ASSINATURA date DEFAULT NULL,
-  ULTIMA_ASSINATURA date DEFAULT NULL,
-  SEGMENTO varchar(21) DEFAULT NULL,
-  HEALTHSCORE decimal(15, 2) DEFAULT NULL,
-  PREDICAO_DE_CHURN varchar(20) DEFAULT NULL,
-  MOMENTO varchar(35) DEFAULT NULL,
-  INSERCAO_EMPODERA date DEFAULT NULL,
-  AGENTES varchar(83) DEFAULT NULL,
-  EMAIL_DO_AGENTE varchar(91) DEFAULT NULL,
-  ESN_NOME varchar(40) DEFAULT NULL,
-  ESN_TELEFONE varchar(15) DEFAULT NULL,
-  ESN_EMAIL varchar(40) DEFAULT NULL,
-  GSN_NOME varchar(37) DEFAULT NULL,
-  GSN_TELEFONE varchar(15) DEFAULT NULL,
-  GSN_EMAIL varchar(35) DEFAULT NULL,
-  GESN_NOME varchar(39) DEFAULT NULL,
-  GESN_TELEFONE varchar(14) DEFAULT NULL,
-  GESN_EMAIL varchar(32) DEFAULT NULL,
-  MONITORADO varchar(14) DEFAULT NULL,
-  UNIDADE_DE_VENDA varchar(99) DEFAULT NULL,
-  FAIXA_DE_FUNCIONARIOS varchar(21) DEFAULT NULL,
-  TIPO_DE_CLIENTE varchar(15) DEFAULT NULL,
-  HEALTHSCORE_IMP decimal(15, 2) DEFAULT NULL,
-  EMAIL_IMP varchar(49) DEFAULT NULL,
-  TIPO_CLIENTE varchar(14) DEFAULT NULL,
-  GRUPO_ECONOMICO varchar(17) DEFAULT NULL,
-  ELEGIVEL_AO_CANCELAMENTO varchar(24) DEFAULT NULL,
-  INADIMPLENTE varchar(14) DEFAULT NULL,
-  MRR_AHGORA decimal(15, 2) DEFAULT NULL,
-  MRR_PAGANTES_AHGORA decimal(15, 2) DEFAULT NULL,
-  PRIMARY KEY (CODT)
+<span class="sql-keyword">CREATE TABLE</span> <span class="sql-table">ahgora.cadastros_t</span> (
+  <span class="sql-column">CODT</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">14</span>) <span class="sql-keyword">NOT NULL</span>,
+  <span class="sql-column">CODIGO_DA_EMPRESA_PW</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">106</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">CARTEIRA</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">14</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">NOME</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">90</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">NOME_FANTASIA</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">80</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">CNPJ</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">18</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">UF</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">14</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">MRR_CONTRATADO_REAL</span> <span class="sql-keyword">decimal</span>(<span class="sql-number">15</span>, <span class="sql-number">2</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">MRR_PAGANTE_REAL</span> <span class="sql-keyword">decimal</span>(<span class="sql-number">15</span>, <span class="sql-number">2</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">PRIMEIRA_ASSINATURA</span> <span class="sql-keyword">date DEFAULT NULL</span>,
+  <span class="sql-column">ULTIMA_ASSINATURA</span> <span class="sql-keyword">date DEFAULT NULL</span>,
+  <span class="sql-column">SEGMENTO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">21</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">HEALTHSCORE</span> <span class="sql-keyword">decimal</span>(<span class="sql-number">15</span>, <span class="sql-number">2</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">PREDICAO_DE_CHURN</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">20</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">MOMENTO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">35</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">INSERCAO_EMPODERA</span> <span class="sql-keyword">date DEFAULT NULL</span>,
+  <span class="sql-column">AGENTES</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">83</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">EMAIL_DO_AGENTE</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">91</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ESN_NOME</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">40</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ESN_TELEFONE</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">15</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ESN_EMAIL</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">40</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">GSN_NOME</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">37</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">GSN_TELEFONE</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">15</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">GSN_EMAIL</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">35</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">GESN_NOME</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">39</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">GESN_TELEFONE</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">14</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">GESN_EMAIL</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">32</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">MONITORADO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">14</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">UNIDADE_DE_VENDA</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">99</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">FAIXA_DE_FUNCIONARIOS</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">21</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">TIPO_DE_CLIENTE</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">15</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">HEALTHSCORE_IMP</span> <span class="sql-keyword">decimal</span>(<span class="sql-number">15</span>, <span class="sql-number">2</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">EMAIL_IMP</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">49</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">TIPO_CLIENTE</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">14</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">GRUPO_ECONOMICO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">17</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ELEGIVEL_AO_CANCELAMENTO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">24</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">INADIMPLENTE</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">14</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">MRR_AHGORA</span> <span class="sql-keyword">decimal</span>(<span class="sql-number">15</span>, <span class="sql-number">2</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">MRR_PAGANTES_AHGORA</span> <span class="sql-keyword">decimal</span>(<span class="sql-number">15</span>, <span class="sql-number">2</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-keyword">PRIMARY KEY</span> (<span class="sql-column">CODT</span>)
 )
-ENGINE = INNODB
-AVG_ROW_LENGTH = 589
-CHARACTER SET latin1
-COLLATE latin1_swedish_ci
-ROW_FORMAT = DYNAMIC;
+<span class="sql-keyword">ENGINE</span> <span class="sql-operator">=</span> <span class="sql-keyword">INNODB</span>
+<span class="sql-keyword">AVG_ROW_LENGTH</span> <span class="sql-operator">=</span> <span class="sql-number">589</span>
+<span class="sql-keyword">CHARACTER SET</span> <span class="sql-keyword">latin1</span>
+<span class="sql-keyword">COLLATE</span> <span class="sql-keyword">latin1_swedish_ci</span>
+<span class="sql-keyword">ROW_FORMAT</span> <span class="sql-operator">=</span> <span class="sql-keyword">DYNAMIC</span>;
 
 
-CREATE TABLE ahgora.empresa_pw (
-  id varchar(255) NOT NULL,
-  name varchar(255) DEFAULT NULL,
-  razao_social varchar(255) DEFAULT NULL,
-  company_identifies text DEFAULT NULL,
-  created_date datetime DEFAULT NULL,
-  test varchar(255) DEFAULT NULL,
-  pendencies_name varchar(255) DEFAULT NULL,
-  plan_id varchar(255) DEFAULT NULL,
-  plan_name varchar(255) DEFAULT NULL,
-  customer_type_name varchar(255) DEFAULT NULL,
-  service_level varchar(255) DEFAULT NULL,
-  blocked varchar(255) DEFAULT NULL,
-  blocked_description text DEFAULT NULL,
-  blocked_responsible varchar(255) DEFAULT NULL,
-  blocked_date datetime DEFAULT NULL,
-  address varchar(255) DEFAULT NULL,
-  address_complement varchar(255) DEFAULT NULL,
-  address_district varchar(255) DEFAULT NULL,
-  address_country_id varchar(255) DEFAULT NULL,
-  address_country_name varchar(255) DEFAULT NULL,
-  address_federation_state_id varchar(255) DEFAULT NULL,
-  address_federation_state_name varchar(255) DEFAULT NULL,
-  address_city varchar(255) DEFAULT NULL,
-  address_cep varchar(255) DEFAULT NULL,
-  telephone_ddd varchar(255) DEFAULT NULL,
-  telephone varchar(255) DEFAULT NULL,
-  finance_id text DEFAULT NULL,
-  contact_points text DEFAULT NULL,
-  module_ahfin_seguro_acidentes_pessoais_88i_enabled varchar(255) DEFAULT NULL,
-  module_pwlite_enabled varchar(255) DEFAULT NULL,
-  module_pwlite_done varchar(255) DEFAULT NULL,
-  module_pwlite_finished_at varchar(255) DEFAULT NULL,
-  csm varchar(255) DEFAULT NULL,
-  segmento varchar(255) DEFAULT NULL,
-  revenda varchar(255) DEFAULT NULL,
-  module_reports_habilita_novo_fluxo_relatorios varchar(255) DEFAULT NULL,
-  module_reports_desabilita_relatorios_antigos varchar(255) DEFAULT NULL,
-  module_reports_agendamento_relatorios varchar(255) DEFAULT NULL,
-  module_reports_usa_mes_atual varchar(255) DEFAULT NULL,
-  module_ahpi_usa_nova_apuracao varchar(255) DEFAULT NULL,
-  module_pwlite_enabled_hourslite varchar(255) DEFAULT NULL,
-  contract_integration varchar(255) DEFAULT NULL,
-  PRIMARY KEY (id)
+<span class="sql-keyword">CREATE TABLE</span> <span class="sql-table">ahgora.empresa_pw</span> (
+  <span class="sql-column">id</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">NOT NULL</span>,
+  <span class="sql-column">name</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">razao_social</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">company_identifies</span> <span class="sql-keyword">text DEFAULT NULL</span>,
+  <span class="sql-column">created_date</span> <span class="sql-keyword">datetime DEFAULT NULL</span>,
+  <span class="sql-column">test</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">pendencies_name</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">plan_id</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">plan_name</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">customer_type_name</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">service_level</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">blocked</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">blocked_description</span> <span class="sql-keyword">text DEFAULT NULL</span>,
+  <span class="sql-column">blocked_responsible</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">blocked_date</span> <span class="sql-keyword">datetime DEFAULT NULL</span>,
+  <span class="sql-column">address</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">address_complement</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">address_district</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">address_country_id</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">address_country_name</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">address_federation_state_id</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">address_federation_state_name</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">address_city</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">address_cep</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">telephone_ddd</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">telephone</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">finance_id</span> <span class="sql-keyword">text DEFAULT NULL</span>,
+  <span class="sql-column">contact_points</span> <span class="sql-keyword">text DEFAULT NULL</span>,
+  <span class="sql-column">module_ahfin_seguro_acidentes_pessoais_88i_enabled</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">module_pwlite_enabled</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">module_pwlite_done</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">module_pwlite_finished_at</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">csm</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">segmento</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">revenda</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">module_reports_habilita_novo_fluxo_relatorios</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">module_reports_desabilita_relatorios_antigos</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">module_reports_agendamento_relatorios</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">module_reports_usa_mes_atual</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">module_ahpi_usa_nova_apuracao</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">module_pwlite_enabled_hourslite</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">contract_integration</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-keyword">PRIMARY KEY</span> (<span class="sql-column">id</span>)
 )
-ENGINE = INNODB
-AVG_ROW_LENGTH = 504
-CHARACTER SET latin1
-COLLATE latin1_swedish_ci
-ROW_FORMAT = DYNAMIC;
+<span class="sql-keyword">ENGINE</span> <span class="sql-operator">=</span> <span class="sql-keyword">INNODB</span>
+<span class="sql-keyword">AVG_ROW_LENGTH</span> <span class="sql-operator">=</span> <span class="sql-number">504</span>
+<span class="sql-keyword">CHARACTER SET</span> <span class="sql-keyword">latin1</span>
+<span class="sql-keyword">COLLATE</span> <span class="sql-keyword">latin1_swedish_ci</span>
+<span class="sql-keyword">ROW_FORMAT</span> <span class="sql-operator">=</span> <span class="sql-keyword">DYNAMIC</span>;
 
 
 
-CREATE TABLE ahgora.ponto_contato (
-  COD_PW varchar(255) DEFAULT NULL,
-  EMPRESA varchar(255) DEFAULT NULL,
-  CONTATO varchar(255) DEFAULT NULL,
-  CNPJ varchar(255) DEFAULT NULL,
-  MYAHGORA varchar(255) DEFAULT NULL,
-  ACESSOWEB varchar(255) DEFAULT NULL,
-  TIMESHEET varchar(255) DEFAULT NULL,
-  FERIAS varchar(255) DEFAULT NULL,
-  ROSTERING varchar(255) DEFAULT NULL,
-  ANALYTICS varchar(255) DEFAULT NULL,
-  SMARTGATE varchar(255) DEFAULT NULL
+<span class="sql-keyword">CREATE TABLE</span> <span class="sql-table">ahgora.ponto_contato</span> (
+  <span class="sql-column">COD_PW</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">EMPRESA</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">CONTATO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">CNPJ</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">MYAHGORA</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ACESSOWEB</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">TIMESHEET</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">FERIAS</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ROSTERING</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ANALYTICS</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">SMARTGATE</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>
 )
-ENGINE = INNODB
-AVG_ROW_LENGTH = 247
-CHARACTER SET latin1
-COLLATE latin1_swedish_ci
-ROW_FORMAT = DYNAMIC;
+<span class="sql-keyword">ENGINE</span> <span class="sql-operator">=</span> <span class="sql-keyword">INNODB</span>
+<span class="sql-keyword">AVG_ROW_LENGTH</span> <span class="sql-operator">=</span> <span class="sql-number">247</span>
+<span class="sql-keyword">CHARACTER SET</span> <span class="sql-keyword">latin1</span>
+<span class="sql-keyword">COLLATE</span> <span class="sql-keyword">latin1_swedish_ci</span>
+<span class="sql-keyword">ROW_FORMAT</span> <span class="sql-operator">=</span> <span class="sql-keyword">DYNAMIC</span>;
 
 
 
-CREATE TABLE ahgora.pontos_contato_pw (
-  BASE varchar(255) DEFAULT NULL,
-  EMAIL varchar(255) DEFAULT NULL,
-  NOME varchar(255) DEFAULT NULL,
-  PERFIL varchar(255) DEFAULT NULL,
-  ORGANIZACAO varchar(255) DEFAULT NULL,
-  CLASSIFICA varchar(255) DEFAULT NULL,
-  CNPJ varchar(255) DEFAULT NULL
+<span class="sql-keyword">CREATE TABLE</span> <span class="sql-table">ahgora.pontos_contato_pw</span> (
+  <span class="sql-column">BASE</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">EMAIL</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">NOME</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">PERFIL</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">ORGANIZACAO</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">CLASSIFICA</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>,
+  <span class="sql-column">CNPJ</span> <span class="sql-keyword">varchar</span>(<span class="sql-number">255</span>) <span class="sql-keyword">DEFAULT NULL</span>
 )
-ENGINE = INNODB
-AVG_ROW_LENGTH = 222
-CHARACTER SET latin1
-COLLATE latin1_swedish_ci
-ROW_FORMAT = DYNAMIC;
+<span class="sql-keyword">ENGINE</span> <span class="sql-operator">=</span> <span class="sql-keyword">INNODB</span>
+<span class="sql-keyword">AVG_ROW_LENGTH</span> <span class="sql-operator">=</span> <span class="sql-number">222</span>
+<span class="sql-keyword">CHARACTER SET</span> <span class="sql-keyword">latin1</span>
+<span class="sql-keyword">COLLATE</span> <span class="sql-keyword">latin1_swedish_ci</span>
+<span class="sql-keyword">ROW_FORMAT</span> <span class="sql-operator">=</span> <span class="sql-keyword">DYNAMIC</span>;
 
 
-
-
-SELECT DISTINCT
-  CASE 
-    WHEN cm.TIPO = 'Empresa' THEN '2'
-    WHEN cm.TIPO = 'Pessoa'  THEN '1'
-    ELSE ''
-  END AS "Tipo",
-  '2' AS "Perfil",
-  
-
-CASE 
-  WHEN cm.TIPO = 'Empresa' THEN 
-    COALESCE(
-      NULLIF(ep.name, ''), 
-      NULLIF(ct.nome, ''), 
-      NULLIF(ct.NOME_FANTASIA, ''), 
-      NULLIF(ep.razao_social, '')
-    )
-  ELSE cm.USUARIO
-END AS "Nome fantasia",
-
-
-
--- Montado sql para atender os criteios de atualização de cadastro da MOVIDESK: https://atendimento.movidesk.com/kb/article/4694/importacao-de-pessoas?menuId=4-66-4694&ticketId= 
-
-
-  '' AS "Razão social",
-
-  cm.USUARIO AS "Usuário",
-  '# Senha removida para preservar integridade' AS "Senha",
-  CASE 
-    WHEN cm.TIPO = 'Empresa' THEN ct.CNPJ
-    ELSE ''
-  END AS "CPF / CNPJ",
-  cm.COD_REF AS "Cod. Ref.",
-  '' AS "Cod. Ref. Adicional",
-  cm.PERFIL AS "Perfil de acesso",
-  'PW LITE' AS "Classificação",
-  '' AS "Cargo",
-  '' AS "Superior hierárquico",
-CASE
-  WHEN cm.EMAIL IS NOT NULL AND cm.EMAIL <> '' THEN 'Profissional'
-  ELSE ''
-END AS "Tipo do e-mail",
-  cm.EMAIL AS "E-mail",
-  cm.TIPO_DO_CONTATO,
-  '' AS "Contato",
-  '' AS "Tipo do endereço",
-  '' AS "País",
-  '' AS "CEP",
-  '' AS "Estado",
-  '' AS "Cidade",
-  '' AS "Bairro",
-  '' AS "Rua",
-  '' AS "Número",
-  '' AS "Complemento",
-  '' AS "Referência",
-  '' AS "Equipe",
-  cm.ORGANIZACOES AS "Organização",
-  'SLA - Padrão' AS "Contrato de SLA",
-  cm.COD_PW AS "Observações",
-  cm.ATIVO AS "Ativo",
-  cm.FUSO_HORARIO AS "Fuso horário",
-  cm.IDIOMA AS "Idioma",
-  '' AS "Autenticar em"
-FROM empresa_pw ep
-LEFT JOIN (
-  SELECT * FROM cadastros_md
-  WHERE LENGTH(COD_PW) >= 6
-    AND TIPO = '1'
-    AND COD_PW REGEXP '[aA]'
-    AND COD_PW REGEXP '([0-9].*){5,}'
-    AND CNPJ IS NULL
-    AND ATIVO IS NOT NULL
-    AND ATIVO != 'Não'
-) cm ON cm.COD_PW LIKE CONCAT('%', ep.id, '%')
-LEFT JOIN cadastros_t ct ON ep.company_identifies LIKE CONCAT('%', ct.CNPJ, '%')
-WHERE ep.plan_name LIKE 'PW Lite - não habilitar';                           
-
-
-
-
-                        </code></pre>
+<span class="sql-keyword">SELECT DISTINCT</span>
+  <span class="sql-keyword">CASE</span> 
+    <span class="sql-keyword">WHEN</span> <span class="sql-column">cm.TIPO</span> <span class="sql-operator">=</span> <span class="sql-string">'Empresa'</span> <span class="sql-keyword">THEN</span> <span class="sql-string">'2'</span>
+    <span class="sql-keyword">WHEN</span> <span class="sql-column">cm.TIPO</span> <span class="sql-operator">=</span> <span class="sql-string">'Pessoa'</span>  <span class="sql-keyword">THEN</span> <span class="sql-string">'1'</span>
+    <span class="sql-keyword">ELSE</span> <span class="sql-string">''</span>
+  <span class="sql-keyword">END</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Tipo"</span>,
+  <span class="sql-string">'2'</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Perfil"</span>,
+  <span class="sql-keyword">CASE</span> 
+    <span class="sql-keyword">WHEN</span> <span class="sql-column">cm.TIPO</span> <span class="sql-operator">=</span> <span class="sql-string">'Empresa'</span> <span class="sql-keyword">THEN</span> 
+      <span class="sql-function">COALESCE</span>(
+        <span class="sql-function">NULLIF</span>(<span class="sql-column">ep.name</span>, <span class="sql-string">''</span>), 
+        <span class="sql-function">NULLIF</span>(<span class="sql-column">ct.nome</span>, <span class="sql-string">''</span>), 
+        <span class="sql-function">NULLIF</span>(<span class="sql-column">ct.NOME_FANTASIA</span>, <span class="sql-string">''</span>), 
+        <span class="sql-function">NULLIF</span>(<span class="sql-column">ep.razao_social</span>, <span class="sql-string">''</span>)
+      )
+    <span class="sql-keyword">ELSE</span> <span class="sql-column">cm.USUARIO</span>
+  <span class="sql-keyword">END</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Nome fantasia"</span>,
+<span class="sql-comment">-- Montado sql para atender os criteios de atualização de cadastro da MOVIDESK: https://atendimento.movidesk.com/kb/article/4694/importacao-de-pessoas?menuId=4-66-4694&ticketId= </span>
+  <span class="sql-string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Razão social"</span>,
+  <span class="sql-column">cm.USUARIO</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Usuário"</span>,
+  <span class="sql-string">'# Senha removida para preservar integridade'</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Senha"</span>,
+  <span class="sql-keyword">CASE</span> 
+    <span class="sql-keyword">WHEN</span> <span class="sql-column">cm.TIPO</span> <span class="sql-operator">=</span> <span class="sql-string">'Empresa'</span> <span class="sql-keyword">THEN</span> <span class="sql-column">ct.CNPJ</span>
+    <span class="sql-keyword">ELSE</span> <span class="sql-string">''</span>
+  <span class="sql-keyword">END</span> <span class="sql-keyword">AS</span> <span class="sql-string">"CPF / CNPJ"</span>,
+  <span class="sql-column">cm.COD_REF</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Cod. Ref."</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Cod. Ref. Adicional"</span>,
+  <span class="sql-column">cm.PERFIL</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Perfil de acesso"</span>,
+  <span class="sql-string">'PW LITE'</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Classificação"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Cargo"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Superior hierárquico"</span>,
+  <span class="sql-keyword">CASE</span>
+    <span class="sql-keyword">WHEN</span> <span class="sql-column">cm.EMAIL</span> <span class="sql-keyword">IS NOT NULL</span> <span class="sql-keyword">AND</span> <span class="sql-column">cm.EMAIL</span> <span class="sql-operator">&lt;&gt;</span> <span class="sql-string">''</span> <span class="sql-keyword">THEN</span> <span class="sql-string">'Profissional'</span>
+    <span class="sql-keyword">ELSE</span> <span class="sql-string">''</span>
+  <span class="sql-keyword">END</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Tipo do e-mail"</span>,
+  <span class="sql-column">cm.EMAIL</span> <span class="sql-keyword">AS</span> <span class="sql-string">"E-mail"</span>,
+  <span class="sql-column">cm.TIPO_DO_CONTATO</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Contato"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Tipo do endereço"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"País"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"CEP"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Estado"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Cidade"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Bairro"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Rua"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Número"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Complemento"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Referência"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Equipe"</span>,
+  <span class="sql-column">cm.ORGANIZACOES</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Organização"</span>,
+  <span class="sql-string">'SLA - Padrão'</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Contrato de SLA"</span>,
+  <span class="sql-column">cm.COD_PW</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Observações"</span>,
+  <span class="sql-column">cm.ATIVO</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Ativo"</span>,
+  <span class="sql-column">cm.FUSO_HORARIO</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Fuso horário"</span>,
+  <span class="sql-column">cm.IDIOMA</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Idioma"</span>,
+  <span class="sql.string">''</span> <span class="sql-keyword">AS</span> <span class="sql-string">"Autenticar em"</span>
+<span class="sql-keyword">FROM</span> <span class="sql-table">empresa_pw</span> <span class="sql-table">ep</span>
+<span class="sql-keyword">LEFT JOIN</span> (
+  <span class="sql-keyword">SELECT</span> * <span class="sql-keyword">FROM</span> <span class="sql-table">cadastros_md</span>
+  <span class="sql-keyword">WHERE</span> <span class="sql-function">LENGTH</span>(<span class="sql-column">COD_PW</span>) <span class="sql-operator">&gt;=</span> <span class="sql-number">6</span>
+    <span class="sql-keyword">AND</span> <span class="sql-column">TIPO</span> <span class="sql-operator">=</span> <span class="sql-string">'1'</span>
+    <span class="sql-keyword">AND</span> <span class="sql-column">COD_PW</span> <span class="sql-keyword">REGEXP</span> <span class="sql-string">'[aA]'</span>
+    <span class="sql-keyword">AND</span> <span class="sql-column">COD_PW</span> <span class="sql-keyword">REGEXP</span> <span class="sql-string">'([0-9].*){5,}'</span>
+    <span class="sql-keyword">AND</span> <span class="sql-column">CNPJ</span> <span class="sql-keyword">IS NULL</span>
+    <span class="sql-keyword">AND</span> <span class="sql-column">ATIVO</span> <span class="sql-keyword">IS NOT NULL</span>
+    <span class="sql-keyword">AND</span> <span class="sql-column">ATIVO</span> <span class="sql-operator">!=</span> <span class="sql-string">'Não'</span>
+) <span class="sql-table">cm</span> <span class="sql-keyword">ON</span> <span class="sql-column">cm.COD_PW</span> <span class="sql-keyword">LIKE</span> <span class="sql-function">CONCAT</span>(<span class="sql-string">'%'</span>, <span class="sql-column">ep.id</span>, <span class="sql-string">'%'</span>)
+<span class="sql-keyword">LEFT JOIN</span> <span class="sql-table">cadastros_t</span> <span class="sql-table">ct</span> <span class="sql-keyword">ON</span> <span class="sql-column">ep.company_identifies</span> <span class="sql-keyword">LIKE</span> <span class="sql-function">CONCAT</span>(<span class="sql-string">'%'</span>, <span class="sql-column">ct.CNPJ</span>, <span class="sql-string">'%'</span>)
+<span class="sql-keyword">WHERE</span> <span class="sql-column">ep.plan_name</span> <span class="sql-keyword">LIKE</span> <span class="sql-string">'PW Lite - não habilitar'</span>;</code></pre>
+                        </div>
                     </div>
                 </div>
                 
                 <div>
                     <h3 class="text-xl font-bold mb-3 text-emerald-300">7.2 Consulta SQL com Python para Geração da Planilha</h3>
-                    <div class="code-block p-4 rounded overflow-x-auto">
-                        <pre class="text-gray-300 text-sm">
-                            <code>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <div class="dot red"></div>
+                                <div class="dot yellow"></div>
+                                <div class="dot green"></div>
+                            </div>
+                            <div class="code-lang">Python</div>
+                        </div>
+                        <div class="code-content">
+                            <pre><code><span class="py-keyword">import</span> <span class="py-builtin">mysql.connector</span>
+<span class="py-keyword">from</span> <span class="py-builtin">mysql.connector</span> <span class="py-keyword">import</span> <span class="py-class">Error</span>
+<span class="py-keyword">import</span> <span class="py-builtin">pandas</span> <span class="py-keyword">as</span> <span class="py-builtin">pd</span>
 
-import mysql.connector
-from mysql.connector import Error
-import pandas as pd
-
-def export_query_to_excel():
-    try:
-        # Conexão com o banco de dados MySQL
-        connection = mysql.connector.connect(
-            host='',
-            user='',
-            password='',
-            database=''  # Nome do banco de dados
+<span class="py-keyword">def</span> <span class="py-function">export_query_to_excel</span>():
+    <span class="py-keyword">try</span>:
+        <span class="py-comment"># Conexão com o banco de dados MySQL</span>
+        <span class="py-builtin">connection</span> = <span class="py-builtin">mysql.connector.connect</span>(
+            <span class="py-builtin">host</span>=<span class="py-string">''</span>,
+            <span class="py-builtin">user</span>=<span class="py-string">''</span>,
+            <span class="py-builtin">password</span>=<span class="py-string">''</span>,
+            <span class="py-builtin">database</span>=<span class="py-string">''</span>  <span class="py-comment"># Nome do banco de dados</span>
         )
 
-        if connection.is_connected():
-            print("Conexão bem-sucedida ao banco de dados.")
-# Montado sql para atender os criteios de atualização de cadastro da MOVIDESK: 
-# https://atendimento.movidesk.com/kb/article/4694/importacao-de-pessoas?menuId=4-66-4694&ticketId= 
-            # Consulta SQL
-            query = """
+        <span class="py-keyword">if</span> <span class="py-builtin">connection.is_connected</span>():
+            <span class="py-function">print</span>(<span class="py-string">"Conexão bem-sucedida ao banco de dados."</span>)
+            
+            <span class="py-comment"># Consulta SQL para atender os critérios da MOVIDESK</span>
+            <span class="py-builtin">query</span> = <span class="py-string">"""
             SELECT DISTINCT
               CASE 
                 WHEN cm.TIPO = 'Empresa' THEN '2'
@@ -687,78 +759,41 @@ def export_query_to_excel():
               '' AS "Razão social",
               cm.USUARIO AS "Usuário",
               '# Senha removida para preservar integridade' AS "Senha",
-              CASE 
-                WHEN cm.TIPO = 'Empresa' THEN ct.CNPJ
-                ELSE ''
-              END AS "CPF / CNPJ",
               cm.COD_REF AS "Cod. Ref.",
-              '' AS "Cod. Ref. Adicional",
-              cm.PERFIL AS "Perfil de acesso",
               'PW LITE' AS "Classificação",
-              '' AS "Cargo",
-              '' AS "Superior hierárquico",
-              CASE
-                WHEN cm.EMAIL IS NOT NULL AND cm.EMAIL <> '' THEN 'Profissional'
-                ELSE ''
-              END AS "Tipo do e-mail",
               cm.EMAIL AS "E-mail",
-              cm.TIPO_DO_CONTATO AS "Tipo do contato", -- Corrigido para corresponder à coluna original
-              '' AS "Contato",
-              '' AS "Tipo do endereço",
-              '' AS "País",
-              '' AS "CEP",
-              '' AS "Estado",
-              '' AS "Cidade",
-              '' AS "Bairro",
-              '' AS "Rua",
-              '' AS "Número",
-              '' AS "Complemento",
-              '' AS "Referência",
-              '' AS "Equipe",
               cm.ORGANIZACOES AS "Organização",
-              'SLA - Padrão' AS "Contrato de SLA",
-              cm.COD_PW AS "Observações",
-              cm.ATIVO AS "Ativo",
-              cm.FUSO_HORARIO AS "Fuso horário",
-              cm.IDIOMA AS "Idioma",
-              '' AS "Autenticar em"
+              'SLA - Padrão' AS "Contrato de SLA"
             FROM empresa_pw ep
-            LEFT JOIN (
-              SELECT * FROM cadastros_md
-              WHERE LENGTH(COD_PW) >= 6
-                AND TIPO = '1' -- No contexto original, parecia ser 'Empresa', mas TIPO='1' geralmente é Pessoa. Ajustar se necessário.
-                             -- Se TIPO='1' for Pessoa e o objetivo é atualizar EMPRESAS "PW LITE",
-                             -- esta subquery pode precisar de revisão ou o join cm.COD_PW LIKE CONCAT('%', ep.id, '%')
-                             -- pode estar buscando contatos associados à empresa.
-                AND COD_PW REGEXP '[aA]'
-                AND COD_PW REGEXP '([0-9].*){5,}'
-                AND CNPJ IS NULL -- Se são empresas, CNPJ não deveria ser nulo. Isso reforça que 'cm' pode ser contatos.
-                AND ATIVO IS NOT NULL
-                AND ATIVO != 'Não'
-            ) cm ON cm.COD_PW LIKE CONCAT('%', ep.id, '%') -- Assumindo que ep.id é um código da empresa presente em COD_PW dos contatos.
-            LEFT JOIN cadastros_t ct ON ep.company_identifies LIKE CONCAT('%', ct.CNPJ, '%') -- Usando CNPJ para ligar empresa_pw com cadastros_t
+            LEFT JOIN cadastros_md cm ON cm.COD_PW LIKE CONCAT('%', ep.id, '%')
+            LEFT JOIN cadastros_t ct ON ep.company_identifies LIKE CONCAT('%', ct.CNPJ, '%')
             WHERE ep.plan_name LIKE 'PW Lite - não habilitar';        
-            """
+            """</span>
 
-            # Executar a consulta e carregar os dados em um DataFrame do pandas
-            data_frame = pd.read_sql(query, connection)
+            <span class="py-comment"># Executar a consulta e carregar os dados em DataFrame</span>
+            <span class="py-builtin">data_frame</span> = <span class="py-builtin">pd.read_sql</span>(<span class="py-builtin">query</span>, <span class="py-builtin">connection</span>)
 
-            # Exportar para um arquivo Excel
-            output_file = "resultado_consulta.xlsx"
-            data_frame.to_excel(output_file, index=False)
+            <span class="py-comment"># Exportar para arquivo Excel</span>
+            <span class="py-builtin">output_file</span> = <span class="py-string">"resultado_consulta.xlsx"</span>
+            <span class="py-builtin">data_frame.to_excel</span>(<span class="py-builtin">output_file</span>, <span class="py-builtin">index</span>=<span class="py-keyword">False</span>)
 
-            print(f"Consulta exportada com sucesso para o arquivo: {output_file}")
+            <span class="py-function">print</span>(<span class="py-string">f"Consulta exportada com sucesso: {output_file}"</span>)
 
-    except Error as e:
-        print(f"Erro ao conectar ao MySQL: {e}")
-    finally:
-        if connection.is_connected():
-            connection.close()
-            print("Conexão com o banco de dados encerrada.")
+    <span class="py-keyword">except</span> <span class="py-class">Error</span> <span class="py-keyword">as</span> <span class="py-builtin">e</span>:
+        <span class="py-function">print</span>(<span class="py-string">f"Erro ao conectar ao MySQL: {e}"</span>)
+    <span class="py-keyword">finally</span>:
+        <span class="py-keyword">if</span> <span class="py-builtin">connection.is_connected</span>():
+            <span class="py-builtin">connection.close</span>()
+            <span class="py-function">print</span>(<span class="py-string">"Conexão encerrada."</span>)
 
-if __name__ == "__main__":
-    export_query_to_excel()
+<span class="py-keyword">if</span> <span class="py-builtin">__name__</span> == <span class="py-string">"__main__"</span>:
+    <span class="py-function">export_query_to_excel</span>()</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <!-- Gallery Section -->
             <section class="tech-card p-6 rounded-lg">
                 <h2 class="text-2xl font-bold mb-6 glow-text">GALERIA DE EVIDÊNCIAS</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
