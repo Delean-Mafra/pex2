@@ -1,38 +1,28 @@
-# Direitos Autorais
+BSD 3-Clause License
 
-## Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
-## CC BY-NC-SA 4.0
+Copyright © 2025, Delean Mafra
 
-Este trabalho está licenciado sob a licença Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-### Você está livre para:
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
 
-- **Compartilhar** — copiar e redistribuir o material em qualquer meio ou formato
-- **Adaptar** — remixar, transformar e desenvolver o material
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
 
-O licenciante não pode revogar essas liberdades, desde que você siga os termos da licença.
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
 
-### Nos seguintes termos:
-
-- **Atribuição** — Você deve dar o devido crédito a Delean Plince Mafra, fornecer um link para a licença e indicar se foram feitas alterações. Você pode fazê-lo de qualquer maneira razoável, mas não de forma que sugira que o licenciante endossa você ou seu uso.
-
-- **Não comercial** — Você não pode usar o material para fins comerciais.
-
-- **Compartilhamento pela mesma licença** — Se você remixar, transformar ou criar a partir do material, deverá distribuir suas contribuições sob a mesma licença CC BY-NC-SA 4.0.
-
-- **Sem restrições adicionais** — Você não pode aplicar termos legais ou medidas tecnológicas que restrinjam legalmente outros de fazerem qualquer coisa que a licença permita.
-
-
-### Atribuição:
-
-**Projeto de Extensão II - Ciência de Dados**  
-© 2025 Delean Plince Mafra  
-Licenciado sob CC BY-NC-SA 4.0  
-https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-Para visualizar uma cópia desta licença, visite:
-https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.pt
-
----
-
-**Nota adicional:** Este projeto foi desenvolvido em parceria com a SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA para fins acadêmicos e educacionais. Os dados e soluções apresentados foram modificados para preservar informações confidenciais e estratégicas da empresa.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
