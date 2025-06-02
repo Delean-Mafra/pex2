@@ -147,7 +147,7 @@ O principal script Python utilizado para gerar a planilha de importação no MOV
 - Scripts SQL e Python documentados no apêndice acima.
 - Imagens e evidências visuais disponíveis na pasta [`evidencias`](https://github.com/Delean-Mafra/pex2/tree/main/evidencias).
 
-
+# Copyright
 <a href="https://delean-mafra.github.io/pex2/">CDADOS PROJETO DE EXTENSÃO II</a> © 2025 by <a href="https://delean-mafra.github.io/Delean-Mafra/">DELEAN MAFRA</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
 ---
