@@ -2,7 +2,6 @@
 
 ## PROTEÇÃO LEGAL E LICENCIAMENTO
 
-
 ---
 
 ## 🇧🇷 LEI Nº 9.610/98 - LEI DE DIREITOS AUTORAIS BRASILEIRA
@@ -17,6 +16,7 @@ Esta obra está protegida contra plágio e cópias indevidas pela Lei nº 9.610/
 - **Art. 29 - Direitos Patrimoniais:**  
   Depende de autorização prévia e expressa do autor a utilização da obra, por quaisquer modalidades, tais como reprodução, edição e adaptação.
 
+---
 
 # LICENÇA CREATIVE COMMONS BY-NC-SA 4.0
 
@@ -54,6 +54,38 @@ Esta obra possui registro de autenticidade e data de criação verificável atra
 **✅ VERIFICAÇÃO DE AUTENTICIDADE**  
 Você pode verificar a autenticidade deste documento utilizando o hash SHA-256 e o timestamp blockchain fornecidos.  
 Esta tecnologia garante que o conteúdo não foi alterado desde sua criação original.
+
+---
+
+## 🆔 DOI - IDENTIFICADOR DIGITAL ÚNICO
+
+**Digital Object Identifier**
+
+Este projeto possui um DOI (Digital Object Identifier), que é um identificador digital único e persistente reconhecido internacionalmente. O DOI garante que esta obra possa ser citada, referenciada e localizada de forma permanente no meio acadêmico e científico.
+
+### ![image1](image1)
+
+**Identificador DOI:**  
+DOI: [10.5281/zenodo.15612206](https://doi.org/10.5281/zenodo.15612206)
+
+- **Link Permanente:**  
+  https://doi.org/10.5281/zenodo.15612206
+
+- **Repositório:**  
+  Zenodo - Repositório Científico Europeu
+
+### 📖 Vantagens do DOI
+- Identificação única e permanente
+- Reconhecimento acadêmico internacional
+- Facilita citações e referências
+- Aumenta a visibilidade da pesquisa
+- Garante a persistência do link
+
+### 🌍 Padrão Internacional
+O DOI é mantido pela International DOI Foundation (IDF) e é amplamente aceito por editoras, bibliotecas e bases de dados acadêmicas mundiais.
+
+### ✅ CERTIFICAÇÃO ACADÊMICA
+A atribuição do DOI certifica que este projeto atende aos padrões de qualidade e rigor acadêmico necessários para publicação em repositórios científicos internacionais.
 
 ---
 
@@ -97,10 +129,9 @@ A presente obra, como atividade extensionista, contribui para a formação cidad
 Este projeto atende aos requisitos estabelecidos pela regulamentação nacional para atividades de extensão universitária, garantindo sua validade acadêmica e social.
 
 ---
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15612206.svg)](https://doi.org/10.5281/zenodo.15612206)
 
 ---
 
----
 **CC BY-NC-SA 4.0**
----
