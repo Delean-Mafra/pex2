@@ -2,7 +2,6 @@
 
 ## PROTEÇÃO LEGAL E LICENCIAMENTO
 
-← [Voltar ao Relatório Principal](./RELATORIO_DE_ATIVIDADES.md)
 
 ---
 
