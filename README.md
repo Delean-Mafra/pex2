@@ -1,5 +1,10 @@
 # RELATÓRIO DE ATIVIDADES – PROJETO DE EXTENSÃO II
 
+## Autoria
+
+Este projeto foi idealizado, desenvolvido e documentado por **Delean Plince Mafra**. Todas as etapas, decisões técnicas e entregas descritas neste relatório são de minha responsabilidade, salvo menção explícita de contribuições externas. O reconhecimento da autoria é obrigatório em qualquer reprodução, adaptação ou redistribuição deste material.
+
+---
 
 ## Descrição
 
@@ -147,8 +152,13 @@ O principal script Python utilizado para gerar a planilha de importação no MOV
 - Scripts SQL e Python documentados no apêndice acima.
 - Imagens e evidências visuais disponíveis na pasta [`evidencias`](https://github.com/Delean-Mafra/pex2/tree/main/evidencias).
 
-# Copyright
-<a href="https://delean-mafra.github.io/pex2/">CDADOS PROJETO DE EXTENSÃO II</a> © 2025 by <a href="https://delean-mafra.github.io/Delean-Mafra/">DELEAN MAFRA</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+---
+
+## Licenciamento e Direitos Autorais
+
+<a href="https://delean-mafra.github.io/pex2/">CDADOS PROJETO DE EXTENSÃO II</a> © 2025 por <a href="https://delean-mafra.github.io/Delean-Mafra/">DELEAN PLINCE MAFRA</a> é licenciado sob <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">  
+
+Este relatório e todo o conteúdo associado são de autoria original de Delean Mafra. É obrigatório o devido crédito à autoria em qualquer uso ou adaptação do presente material.
 
 ---
 
