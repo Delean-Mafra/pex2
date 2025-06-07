@@ -3,6 +3,8 @@
 ## Autoria
 
 Este projeto foi idealizado, desenvolvido e documentado por **Delean Plince Mafra**. Todas as etapas, decisões técnicas e entregas descritas neste relatório são de minha responsabilidade, salvo menção explícita de contribuições externas. O reconhecimento da autoria é obrigatório em qualquer reprodução, adaptação ou redistribuição deste material.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15612206.svg)](https://doi.org/10.5281/zenodo.15612206)
+
 
 ---
 
