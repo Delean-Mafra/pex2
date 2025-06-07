@@ -97,5 +97,10 @@ A presente obra, como atividade extensionista, contribui para a formação cidad
 Este projeto atende aos requisitos estabelecidos pela regulamentação nacional para atividades de extensão universitária, garantindo sua validade acadêmica e social.
 
 ---
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15612206.svg)](https://doi.org/10.5281/zenodo.15612206)
+
+---
+
+---
 **CC BY-NC-SA 4.0**
 ---
