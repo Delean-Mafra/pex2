@@ -63,10 +63,9 @@ Esta tecnologia garante que o conteúdo não foi alterado desde sua criação or
 
 Este projeto possui um DOI (Digital Object Identifier), que é um identificador digital único e persistente reconhecido internacionalmente. O DOI garante que esta obra possa ser citada, referenciada e localizada de forma permanente no meio acadêmico e científico.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15612206.svg)](https://doi.org/10.5281/zenodo.15612206)
 
 **Identificador DOI:**  
-DOI: [10.5281/zenodo.15612206](https://doi.org/10.5281/zenodo.15612206)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15612206.svg)](https://doi.org/10.5281/zenodo.15612206)
 
 - **Link Permanente:**  
   https://doi.org/10.5281/zenodo.15612206
