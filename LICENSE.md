@@ -17,14 +17,6 @@ Esta obra está protegida contra plágio e cópias indevidas pela Lei nº 9.610/
 - **Art. 29 - Direitos Patrimoniais:**  
   Depende de autorização prévia e expressa do autor a utilização da obra, por quaisquer modalidades, tais como reprodução, edição e adaptação.
 
----
-
-## ⚠️ AVISO LEGAL
-
-A violação dos direitos autorais é crime previsto no Art. 184 do Código Penal Brasileiro, com pena de detenção de 3 meses a 1 ano, ou multa.  
-A reprodução não autorizada pode resultar em sanções civis e criminais.
-
----
 
 # LICENÇA CREATIVE COMMONS BY-NC-SA 4.0
 
