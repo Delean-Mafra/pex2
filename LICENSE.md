@@ -1,38 +1,3 @@
-## 📚 ARTIGO ACADÊMICO PUBLICADO
-
-**Publicação em Plataforma Acadêmica**
-
-Este projeto foi publicado como artigo acadêmico na plataforma Academia.edu, uma das principais redes sociais acadêmicas globais. A publicação garante maior visibilidade, acessibilidade e reconhecimento no meio científico e acadêmico internacional.
-
-![image2](image2)
-
-**🔗 Artigo Publicado**  
-**Academia.edu**  
-**Título:**  
-*"CIÊNCIA DE DADOS: RELATÓRIO DE ATIVIDADES - PROJETO DE EXTENSÃO II"*
-
-**Link da Publicação:**  
-[https://www.academia.edu/129803843/CIÊNCIA_DE_DADOS_RELATÓRIO_DE_ATIVIDADES_PROJETO_DE_EXTENSÃO_II](https://www.academia.edu/129803843/CIÊNCIA_DE_DADOS_RELATÓRIO_DE_ATIVIDADES_PROJETO_DE_EXTENSÃO_II)
-
-### 🌐 Academia.edu
-- Plataforma acadêmica global
-- Mais de 200 milhões de usuários
-- Rede social para pesquisadores
-- Compartilhamento de papers acadêmicos
-- Indexação e descoberta científica
-
-### 📊 Benefícios da Publicação
-- Maior visibilidade acadêmica
-- Acesso público ao conhecimento
-- Networking com pesquisadores
-- Métricas de impacto acadêmico
-- Facilitação de citações
-
-### ✅ VALIDAÇÃO ACADÊMICA
-A publicação na Academia.edu complementa a validação acadêmica do projeto, proporcionando acesso aberto ao conhecimento produzido e facilitando o intercâmbio científico com a comunidade acadêmica internacional.
-
----
-
 # ⚖️ DIREITOS AUTORAIS E PROPRIEDADE INTELECTUAL
 
 ## PROTEÇÃO LEGAL E LICENCIAMENTO
@@ -160,6 +125,42 @@ A presente obra, como atividade extensionista, contribui para a formação cidad
 ### 📋 CONFORMIDADE REGULATÓRIA
 
 Este projeto atende aos requisitos estabelecidos pela regulamentação nacional para atividades de extensão universitária, garantindo sua validade acadêmica e social.
+
+---
+## 📚 ARTIGO ACADÊMICO PUBLICADO
+
+**Publicação em Plataforma Acadêmica**
+
+Este projeto foi publicado como artigo acadêmico na plataforma Academia.edu, uma das principais redes sociais acadêmicas globais. A publicação garante maior visibilidade, acessibilidade e reconhecimento no meio científico e acadêmico internacional.
+
+**🔗 Artigo Publicado**  
+**Academia.edu**  
+**Título:**  
+*"CIÊNCIA DE DADOS: RELATÓRIO DE ATIVIDADES - PROJETO DE EXTENSÃO II"*
+
+**Link da Publicação:**  
+[https://www.academia.edu/129803843/CIÊNCIA_DE_DADOS_RELATÓRIO_DE_ATIVIDADES_PROJETO_DE_EXTENSÃO_II](https://www.academia.edu/129803843/CIÊNCIA_DE_DADOS_RELATÓRIO_DE_ATIVIDADES_PROJETO_DE_EXTENSÃO_II)
+
+### 🌐 Academia.edu
+- Plataforma acadêmica global
+- Mais de 200 milhões de usuários
+- Rede social para pesquisadores
+- Compartilhamento de papers acadêmicos
+- Indexação e descoberta científica
+
+### 📊 Benefícios da Publicação
+- Maior visibilidade acadêmica
+- Acesso público ao conhecimento
+- Networking com pesquisadores
+- Métricas de impacto acadêmico
+- Facilitação de citações
+
+### ✅ VALIDAÇÃO ACADÊMICA
+A publicação na Academia.edu complementa a validação acadêmica do projeto, proporcionando acesso aberto ao conhecimento produzido e facilitando o intercâmbio científico com a comunidade acadêmica internacional.
+
+---
+---
+
 
 ---
 
