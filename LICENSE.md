@@ -63,7 +63,7 @@ Esta tecnologia garante que o conteúdo não foi alterado desde sua criação or
 
 Este projeto possui um DOI (Digital Object Identifier), que é um identificador digital único e persistente reconhecido internacionalmente. O DOI garante que esta obra possa ser citada, referenciada e localizada de forma permanente no meio acadêmico e científico.
 
-### ![image1](image1)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15612206.svg)](https://doi.org/10.5281/zenodo.15612206)
 
 **Identificador DOI:**  
 DOI: [10.5281/zenodo.15612206](https://doi.org/10.5281/zenodo.15612206)
@@ -128,10 +128,5 @@ A presente obra, como atividade extensionista, contribui para a formação cidad
 
 Este projeto atende aos requisitos estabelecidos pela regulamentação nacional para atividades de extensão universitária, garantindo sua validade acadêmica e social.
 
----
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15612206.svg)](https://doi.org/10.5281/zenodo.15612206)
-
----
 
 **CC BY-NC-SA 4.0**
