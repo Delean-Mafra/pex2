@@ -1,3 +1,38 @@
+## 📚 ARTIGO ACADÊMICO PUBLICADO
+
+**Publicação em Plataforma Acadêmica**
+
+Este projeto foi publicado como artigo acadêmico na plataforma Academia.edu, uma das principais redes sociais acadêmicas globais. A publicação garante maior visibilidade, acessibilidade e reconhecimento no meio científico e acadêmico internacional.
+
+![image2](image2)
+
+**🔗 Artigo Publicado**  
+**Academia.edu**  
+**Título:**  
+*"CIÊNCIA DE DADOS: RELATÓRIO DE ATIVIDADES - PROJETO DE EXTENSÃO II"*
+
+**Link da Publicação:**  
+[https://www.academia.edu/129803843/CIÊNCIA_DE_DADOS_RELATÓRIO_DE_ATIVIDADES_PROJETO_DE_EXTENSÃO_II](https://www.academia.edu/129803843/CIÊNCIA_DE_DADOS_RELATÓRIO_DE_ATIVIDADES_PROJETO_DE_EXTENSÃO_II)
+
+### 🌐 Academia.edu
+- Plataforma acadêmica global
+- Mais de 200 milhões de usuários
+- Rede social para pesquisadores
+- Compartilhamento de papers acadêmicos
+- Indexação e descoberta científica
+
+### 📊 Benefícios da Publicação
+- Maior visibilidade acadêmica
+- Acesso público ao conhecimento
+- Networking com pesquisadores
+- Métricas de impacto acadêmico
+- Facilitação de citações
+
+### ✅ VALIDAÇÃO ACADÊMICA
+A publicação na Academia.edu complementa a validação acadêmica do projeto, proporcionando acesso aberto ao conhecimento produzido e facilitando o intercâmbio científico com a comunidade acadêmica internacional.
+
+---
+
 # ⚖️ DIREITOS AUTORAIS E PROPRIEDADE INTELECTUAL
 
 ## PROTEÇÃO LEGAL E LICENCIAMENTO
@@ -62,7 +97,6 @@ Esta tecnologia garante que o conteúdo não foi alterado desde sua criação or
 **Digital Object Identifier**
 
 Este projeto possui um DOI (Digital Object Identifier), que é um identificador digital único e persistente reconhecido internacionalmente. O DOI garante que esta obra possa ser citada, referenciada e localizada de forma permanente no meio acadêmico e científico.
-
 
 **Identificador DOI:**  
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15612206.svg)](https://doi.org/10.5281/zenodo.15612206)
