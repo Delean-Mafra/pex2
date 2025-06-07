@@ -97,11 +97,5 @@ A presente obra, como atividade extensionista, contribui para a formação cidad
 Este projeto atende aos requisitos estabelecidos pela regulamentação nacional para atividades de extensão universitária, garantindo sua validade acadêmica e social.
 
 ---
-
-← [Voltar ao Relatório Principal](./RELATORIO_DE_ATIVIDADES.md)
-
----
-
-> Esta página complementa as informações legais do Projeto de Extensão II - CDADOS
-
 **CC BY-NC-SA 4.0**
+---
