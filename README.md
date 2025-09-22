@@ -2,7 +2,7 @@
 
 ## Autoria
 
-Este projeto foi idealizado, desenvolvido e documentado por **Delean P Mafra**. Todas as etapas, decisões técnicas e entregas descritas neste relatório são de minha responsabilidade, salvo menção explícita de contribuições externas. O reconhecimento da autoria é obrigatório em qualquer reprodução, adaptação ou redistribuição deste material.
+Este projeto foi idealizado, desenvolvido e documentado por **Delean Mafra**. Todas as etapas, decisões técnicas e entregas descritas neste relatório são de minha responsabilidade, salvo menção explícita de contribuições externas. O reconhecimento da autoria é obrigatório em qualquer reprodução, adaptação ou redistribuição deste material.
 
 ---
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15612206.svg)](https://doi.org/10.5281/zenodo.15612206)
@@ -153,7 +153,7 @@ O principal script Python utilizado para gerar a planilha de importação no MOV
 - Relatórios e gráficos entregues à equipe técnica e aos Product Owners.
 - Código-fonte disponível neste repositório.
 - Scripts SQL e Python documentados no apêndice acima.
-- Imagens e evidências visuais disponíveis na pasta [`evidencias`](https://github.com/Delean-Mafra/pex2/tree/main/evidencias).
+- Imagens e evidências visuais disponíveis na pasta [`evidencias`](https://github.com/Delean-Mafra/pex2/tree/main/evidencias).(Por questões de segurança e privacidade este repositorio foi descontinuado)
 
 ---
 
