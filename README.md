@@ -17,7 +17,7 @@ Este repositório contém o projeto desenvolvido no contexto do **Projeto de Ext
 
 ## Organização Parceira
 
-- **Nome:** SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA  
+- **Nome:** TOTVS
 - **Representante:** Tech Leader
 - **Área de atuação:** Desenvolvimento de software e suporte técnico  
 
