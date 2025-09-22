@@ -2,7 +2,7 @@
 
 ## Autoria
 
-Este projeto foi idealizado, desenvolvido e documentado por **Delean Plince Mafra**. Todas as etapas, decisões técnicas e entregas descritas neste relatório são de minha responsabilidade, salvo menção explícita de contribuições externas. O reconhecimento da autoria é obrigatório em qualquer reprodução, adaptação ou redistribuição deste material.
+Este projeto foi idealizado, desenvolvido e documentado por **Delean P Mafra**. Todas as etapas, decisões técnicas e entregas descritas neste relatório são de minha responsabilidade, salvo menção explícita de contribuições externas. O reconhecimento da autoria é obrigatório em qualquer reprodução, adaptação ou redistribuição deste material.
 
 ---
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15612206.svg)](https://doi.org/10.5281/zenodo.15612206)
@@ -11,14 +11,14 @@ Este projeto foi idealizado, desenvolvido e documentado por **Delean Plince Mafr
 
 ## Descrição
 
-Este repositório contém o projeto desenvolvido no contexto do **Projeto de Extensão II** do curso de Ciência de Dados, realizado na empresa **SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA**. O objetivo principal do projeto foi identificar, classificar e integrar corretamente os dados de clientes com até 100 funcionários ("PW LITE") no sistema de suporte da empresa, garantindo a consistência das informações para geração de relatórios e indicadores internos.
+Este repositório contém o projeto desenvolvido no contexto do **Projeto de Extensão II** do curso de Ciência de Dados, realizado na empresa **TOTVS**. O objetivo principal do projeto foi identificar, classificar e integrar corretamente os dados de clientes com até 100 funcionários ("PW LITE") no sistema de suporte da empresa, garantindo a consistência das informações para geração de relatórios e indicadores internos.
 
 ---
 
 ## Organização Parceira
 
 - **Nome:** SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA  
-- **Representante:** Aldair Schveitzer – Tech Leader  
+- **Representante:** Tech Leader
 - **Área de atuação:** Desenvolvimento de software e suporte técnico  
 
 ---
