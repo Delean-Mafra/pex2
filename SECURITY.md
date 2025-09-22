@@ -2,7 +2,7 @@
 
 ## Compromisso com a Segurança da Informação
 
-Este repositório contém o Projeto de Extensão II desenvolvido para a SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA, demonstrando meu compromisso com a segurança da informação e com as políticas internas da organização parceira.
+Este repositório contém o Projeto de Extensão II desenvolvido para a AHGORA HCM, demonstrando meu compromisso com a segurança da informação e com as políticas internas da organização parceira.
 
 ## Medidas de Proteção Implementadas
 
@@ -23,7 +23,7 @@ Este repositório contém o Projeto de Extensão II desenvolvido para a SOLUÇÕ
 
 ## Conformidade e Responsabilidade
 
-Este projeto segue as diretrizes estabelecidas no acordo de confidencialidade firmado com a SOLUÇÕES EM SOFTWARE E SERVIÇOS TTS LTDA e está em conformidade com a Lei Geral de Proteção de Dados (LGPD).
+Este projeto segue as diretrizes estabelecidas no acordo de confidencialidade firmado com a AHGORA HCM e está em conformidade com a Lei Geral de Proteção de Dados (LGPD).
 
 Como desenvolvedor deste projeto, assumo total responsabilidade pela manutenção da confidencialidade das informações às quais tive acesso durante sua execução, mesmo após a conclusão das atividades acadêmicas.
 
