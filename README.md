@@ -11,13 +11,13 @@ Este projeto foi idealizado, desenvolvido e documentado por **Delean Mafra**. To
 
 ## Descrição
 
-Este repositório contém o projeto desenvolvido no contexto do **Projeto de Extensão II** do curso de Ciência de Dados, realizado na empresa **TOTVS**. O objetivo principal do projeto foi identificar, classificar e integrar corretamente os dados de clientes com até 100 funcionários ("PW LITE") no sistema de suporte da empresa, garantindo a consistência das informações para geração de relatórios e indicadores internos.
+Este repositório contém o projeto desenvolvido no contexto do **Projeto de Extensão II** do curso de Ciência de Dados, realizado na empresa **AHGORA HCM**. O objetivo principal do projeto foi identificar, classificar e integrar corretamente os dados de clientes com até 100 funcionários ("PW LITE") no sistema de suporte da empresa, garantindo a consistência das informações para geração de relatórios e indicadores internos.
 
 ---
 
 ## Organização Parceira
 
-- **Nome:** TOTVS
+- **Nome:** AHGORA HCM
 - **Representante:** Tech Leader
 - **Área de atuação:** Desenvolvimento de software e suporte técnico  
 
