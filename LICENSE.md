@@ -18,21 +18,41 @@ Esta obra está protegida contra plágio e cópias indevidas pela Lei nº 9.610/
 
 ---
 
-# LICENÇA CREATIVE COMMONS BY-NC-SA 4.0
+## 📄 **LICENÇA CREATIVE COMMONS BY-NC-SA 4.0**
 
-**Termos da Licença**
+<div align="center">
 
-- **Atribuição (BY):**  
-  Você deve dar crédito apropriado, fornecer um link para a licença e indicar se mudanças foram feitas.
+[![CC](https://mirrors.creativecommons.org/presskit/icons/cc.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![BY](https://mirrors.creativecommons.org/presskit/icons/by.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![NC](https://mirrors.creativecommons.org/presskit/icons/nc.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![SA](https://mirrors.creativecommons.org/presskit/icons/sa.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-- **Não Comercial (NC):**  
-  Você não pode usar o material para fins comerciais sem autorização expressa do autor.
+</div>
 
-- **Compartilha Igual (SA):**  
-  Se você remixar, transformar ou criar a partir do material, deve distribuir suas contribuições sob a mesma licença.
+### 🔧 **Termos da Licença**
 
-🔗 [Link da Licença](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+<table>
+<tr>
+<td width="50%">
 
+**✅ Atribuição (BY)**
+> Você deve dar crédito apropriado, fornecer um link para a licença e indicar se mudanças foram feitas.
+
+**🚫 Não Comercial (NC)** 
+> Você não pode usar o material para fins comerciais sem autorização expressa do autor.
+
+</td>
+<td width="50%">
+
+**🔄 Compartilha Igual (SA)**
+> Se você remixar, transformar ou criar a partir do material, deve distribuir suas contribuições sob a mesma licença.
+
+**🔗 Link da Licença**
+> [creativecommons.org/licenses/by-nc-sa/4.0/](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+</td>
+</tr>
+</table>
 ---
 
 ## 🔗 VERIFICAÇÃO BLOCKCHAIN E ASSINATURA DIGITAL
