@@ -22,10 +22,10 @@ Esta obra está protegida contra plágio e cópias indevidas pela Lei nº 9.610/
 
 <div align="center">
 
-[![CC](https://mirrors.creativecommons.org/presskit/icons/cc.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![BY](https://mirrors.creativecommons.org/presskit/icons/by.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![NC](https://mirrors.creativecommons.org/presskit/icons/nc.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![SA](https://mirrors.creativecommons.org/presskit/icons/sa.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![CC](https://mirrors.creativecommons.org/presskit/icons/cc.svg)](https://delean-mafra.github.io/pex2/CC_BY_NC_4.0)
+[![BY](https://mirrors.creativecommons.org/presskit/icons/by.svg)](https://delean-mafra.github.io/pex2/CC_BY_NC_4.0)
+[![NC](https://mirrors.creativecommons.org/presskit/icons/nc.svg)](https://delean-mafra.github.io/pex2/CC_BY_NC_4.0)
+[![SA](https://mirrors.creativecommons.org/presskit/icons/sa.svg)](https://delean-mafra.github.io/pex2/CC_BY_NC_4.0)
 
 </div>
 
@@ -48,7 +48,7 @@ Esta obra está protegida contra plágio e cópias indevidas pela Lei nº 9.610/
 > Se você remixar, transformar ou criar a partir do material, deve distribuir suas contribuições sob a mesma licença.
 
 **🔗 Link da Licença**
-> [creativecommons.org/licenses/by-nc-sa/4.0/](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+> [creativecommons.org/licenses/by-nc-sa/4.0/](https://delean-mafra.github.io/pex2/CC_BY_NC_4.0)
 
 </td>
 </tr>
@@ -184,6 +184,6 @@ A publicação na Academia.edu complementa a validação acadêmica do projeto, 
 
 ---
 
-<a href="https://delean-mafra.github.io/pex2/">CDADOS PROJETO DE EXTENSÃO II</a> © 2025 por <a href="https://delean-mafra.github.io/Delean-Mafra/">DELEAN PLINCE MAFRA</a> é licenciado sob <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">  
+<a href="https://delean-mafra.github.io/pex2/">CDADOS PROJETO DE EXTENSÃO II</a> © 2025 por <a href="https://delean-mafra.github.io/Delean-Mafra/">DELEAN PLINCE MAFRA</a> é licenciado sob <a href="https://delean-mafra.github.io/pex2/CC_BY_NC_4.0">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">  
 
 ---
