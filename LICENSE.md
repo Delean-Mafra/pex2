@@ -48,7 +48,7 @@ Esta obra está protegida contra plágio e cópias indevidas pela Lei nº 9.610/
 > Se você remixar, transformar ou criar a partir do material, deve distribuir suas contribuições sob a mesma licença.
 
 **🔗 Link da Licença**
-> [creativecommons.org/licenses/by-nc-sa/4.0/](https://delean-mafra.github.io/pex2/CC_BY_NC_4.0)
+> [BY-NC-SA 4.0](https://delean-mafra.github.io/pex2/CC_BY_NC_4.0)
 
 </td>
 </tr>
