@@ -47,3 +47,5 @@ Este código reflete minha intenção de tornar o Projeto de Extensão II uma ex
 Delean Plince Mafra  
 Estudante de Ciência de Dados  
 Autor e responsável pelo projeto
+
+- Relatório completo: https://delean-mafra.github.io/pex2

@@ -40,3 +40,4 @@ Caso identifique qualquer vulnerabilidade de segurança neste repositório ou ac
 
 Delean Plince Mafra  
 Estudante de Ciência de Dados
+- Relatório completo: https://delean-mafra.github.io/pex2

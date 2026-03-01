@@ -187,3 +187,5 @@ A publicação na Academia.edu complementa a validação acadêmica do projeto, 
 <a href="https://delean-mafra.github.io/pex2/">CDADOS PROJETO DE EXTENSÃO II</a> © 2025 por <a href="https://delean-mafra.github.io/Delean-Mafra/">DELEAN PLINCE MAFRA</a> é licenciado sob <a href="https://delean-mafra.github.io/pex2/CC_BY_NC_4.0">CC BY-NC-SA 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">  
 
 ---
+
+- Relatório completo: https://delean-mafra.github.io/pex2
