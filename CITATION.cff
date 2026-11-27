@@ -1,0 +1,8 @@
+cff-version: v1
+message: "Se utilizar este software, por favor cite-o conforme abaixo."
+title: "CIÊNCIA DE DADOS - Delean Mafra - PROJETO DE EXTENSÃO II"
+authors:
+  - family-names: "Mafra"
+    given-names: "Delean Plince"
+doi: 10.5281/zenodo.15612206
+date-released: 2025-06-07
